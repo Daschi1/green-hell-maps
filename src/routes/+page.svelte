@@ -10,11 +10,12 @@
   const southLength = southEnd - southStart + 1; // 38 + 1
 </script>
 
-<div class="relative w-[2751px] h-[2899px] cursor-crosshair">
-  <img class="pointer-events-none" alt="soa-map.png" src="soa-map.png">
+<div class="relative h-[2899px] w-[2751px] cursor-crosshair">
+  <img class="pointer-events-none" alt="soa-map.png" src="soa-map.png" />
 
   <div
-    class="absolute top-0 left-0 w-full h-full grid grid-cols-[repeat(37,_minmax(0,_1fr))] grid-rows-[repeat(39,_minmax(0,_1fr))]">
+    class="absolute left-0 top-0 grid h-full w-full grid-cols-[repeat(37,_minmax(0,_1fr))] grid-rows-[repeat(39,_minmax(0,_1fr))]"
+  >
     {#each { length: southLength } as _, south}
       {#each { length: westLength } as _, west}
         <Coordinate south={southStart + south} west={westStart - west} />

@@ -13,11 +13,17 @@
   }
 </script>
 
-<div class="p-0.5 {visible ? 'opacity-100' : 'opacity-0'} hover:opacity-100" aria-checked={visible}
-     onclick={toggleVisibility} onkeydown={() => {}}
-     role="checkbox" tabindex="0">
+<div
+  class="p-0.5 {visible ? 'opacity-100' : 'opacity-0'} hover:opacity-100"
+  aria-checked={visible}
+  onclick={toggleVisibility}
+  onkeydown={() => {}}
+  role="checkbox"
+  tabindex="0"
+>
   <div
-    class="w-full h-full bg-blue-500/60 text-xl font-mono text-black select-none flex flex-col items-center justify-center">
+    class="flex h-full w-full select-none flex-col items-center justify-center bg-blue-500/60 font-mono text-xl text-black"
+  >
     <div>
       <span class="font-bold">{west}</span>'W
     </div>
