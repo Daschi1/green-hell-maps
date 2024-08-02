@@ -17,11 +17,11 @@
      onclick={toggleVisibility} onkeydown={() => {}}
      role="checkbox" tabindex="0">
   <div
-    class="w-full h-full bg-blue-500/75 text-xl text-black select-none flex flex-col items-center justify-center">
-    <div class="text-xl">
+    class="w-full h-full bg-blue-500/75 text-xl font-mono text-black select-none flex flex-col items-center justify-center">
+    <div>
       <span class="font-bold">{west}</span>'W
     </div>
-    <div class="">
+    <div>
       <span class="font-bold">{south}</span>'S
     </div>
   </div>
