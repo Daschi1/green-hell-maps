@@ -4,7 +4,6 @@
   const westStart = 56;
   const westEnd = 20;
   const westLength = westStart - westEnd + 1; // 36 + 1
-  $inspect(westLength);
 
   const southStart = 12;
   const southEnd = 50;
