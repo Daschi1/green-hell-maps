@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/soa-map.iml" filepath="$PROJECT_DIR$/.idea/soa-map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/green-hell-maps.iml" filepath="$PROJECT_DIR$/.idea/green-hell-maps.iml" />
     </modules>
   </component>
 </project>
