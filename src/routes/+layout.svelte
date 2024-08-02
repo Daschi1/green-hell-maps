@@ -1,19 +1,27 @@
 <script>
   import "../app.css";
-  import { Navbar, NavBrand, NavHamburger, NavLi, NavUl } from "flowbite-svelte";
+  import {
+    Sidebar, SidebarBrand, SidebarGroup, SidebarItem,
+    SidebarWrapper,
+  } from "flowbite-svelte";
   import { page } from "$app/stores";
 
   let activeUrl = $derived($page.url.pathname);
-  $inspect(activeUrl)
+  const site = {
+    name: "Green Hell Maps",
+    href: "/",
+    img: "",
+  };
 </script>
 
-<Navbar>
-  <NavBrand>Green Hell Maps</NavBrand>
-  <NavHamburger />
-  <NavUl {activeUrl}>
-    <NavLi href="/story-mode">Story Mode</NavLi>
-    <NavLi href="/spirits-of-amazonia">Spirits of Amazonia</NavLi>
-  </NavUl>
-</Navbar>
+<Sidebar {activeUrl}>
+  <SidebarWrapper>
+    <SidebarGroup>
+      <SidebarBrand {site}></SidebarBrand>
+      <SidebarItem href="/story-mode" label="Story Mode" />
+      <SidebarItem href="/spirits-of-amazonia" label="Spirits of Amazonia" />
+    </SidebarGroup>
+  </SidebarWrapper>
+</Sidebar>
 
 <slot></slot>
