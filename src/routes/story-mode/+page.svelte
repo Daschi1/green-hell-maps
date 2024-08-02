@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Green Hell Map - Story Mode</title>
+  <title>Green Hell Maps - Story Mode</title>
   <meta name="description" content="Green Hell interactive map for Story Mode" />
 </svelte:head>
 
