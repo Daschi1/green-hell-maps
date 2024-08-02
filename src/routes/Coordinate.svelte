@@ -13,7 +13,7 @@
   }
 </script>
 
-<div class="p-0.5 opacity-{visible ? 100 : 0} hover:opacity-100" aria-checked={visible}
+<div class="p-0.5 {visible ? 'opacity-100' : 'opacity-0'} hover:opacity-100" aria-checked={visible}
      onclick={toggleVisibility} onkeydown={() => {}}
      role="checkbox" tabindex="0">
   <div
