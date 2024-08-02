@@ -11,7 +11,7 @@
 </script>
 
 <div class="relative h-[2899px] w-[2751px] cursor-crosshair">
-  <img class="pointer-events-none" alt="soa-map.png" src="soa-map.png" />
+  <img class="pointer-events-none" alt="soa-map" src="soa-map-updated.png" />
 
   <div
     class="absolute left-0 top-0 grid h-full w-full grid-cols-[repeat(37,_minmax(0,_1fr))] grid-rows-[repeat(39,_minmax(0,_1fr))]"
