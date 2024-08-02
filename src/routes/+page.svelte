@@ -16,7 +16,9 @@
   <div
     class="absolute left-0 top-0 grid h-full w-full grid-cols-[repeat(37,_minmax(0,_1fr))] grid-rows-[repeat(39,_minmax(0,_1fr))]"
   >
+    <!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
     {#each { length: southLength } as _, south}
+      <!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
       {#each { length: westLength } as _, west}
         <Coordinate south={southStart + south} west={westStart - west} />
       {/each}
