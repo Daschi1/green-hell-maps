@@ -22,7 +22,7 @@
   tabindex="0"
 >
   <div
-    class="flex h-full w-full select-none flex-col items-center justify-center bg-blue-500/60 font-mono text-xl text-black"
+    class="flex h-full w-full select-none flex-col items-center justify-center bg-primary-500/60 font-mono text-xl text-black"
   >
     <div>
       <span class="font-bold">{west}</span>'W
