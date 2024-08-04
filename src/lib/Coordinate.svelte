@@ -24,10 +24,10 @@
       // assign array if empty
       if (!coordinates) coordinates = [];
       if (clicked) {
-        // add coordinate if not exists
+        // add coordinate if they don't exist
         if (!coordinates.includes(coordinate)) coordinates = [...coordinates, coordinate];
       } else {
-        // remove coordinate if exists
+        // remove coordinate if they exist
         coordinates = coordinates.filter((c) => c !== coordinate);
       }
       // null array if empty
