@@ -11,7 +11,7 @@
     <div class="flex flex-row gap-2 items-center">
       <Label>Coordinate overlay opacity:</Label>
       <span>
-        <Range class="primary-500" max={1} min={0} step={0.05}
+        <Range max={1} min={0} step={0.05}
                bind:value={$coordinateOverlayOpacity} />
       </span>
       <Checkbox bind:checked={$alwaysShowCoordinateOverlay}>Always show coordinate overlay
