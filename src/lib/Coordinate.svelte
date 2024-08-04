@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { alwaysShowCoordinateOverlay } from "$lib/settings";
+
   interface Props {
     west: number;
     south: number;
@@ -14,7 +16,7 @@
 </script>
 
 <div
-  class="p-0.5 {visible ? 'opacity-100' : 'opacity-0'} hover:opacity-100"
+  class="p-0.5 {$alwaysShowCoordinateOverlay || visible ? 'opacity-100' : 'opacity-0'} hover:opacity-100"
   aria-checked={visible}
   onclick={toggleVisibility}
   onkeydown={() => {}}
