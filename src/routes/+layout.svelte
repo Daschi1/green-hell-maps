@@ -6,15 +6,15 @@
 </script>
 
 <div class="flex flex-col gap-2 p-2">
-  <div class="flex flex-row gap-4 items-center">
+  <div class="flex flex-row items-center gap-4">
     <Navbar />
-    <div class="flex flex-row gap-2 items-center">
+    <div class="flex flex-row items-center gap-2">
       <Label>Coordinate overlay opacity:</Label>
       <span>
-        <Range max={1} min={0} step={0.05}
-               bind:value={$coordinateOverlayOpacity} />
+        <Range max={1} min={0} step={0.05} bind:value={$coordinateOverlayOpacity} />
       </span>
-      <Checkbox bind:checked={$alwaysShowCoordinateOverlay}>Always show coordinate overlay
+      <Checkbox bind:checked={$alwaysShowCoordinateOverlay}
+        >Always show coordinate overlay
       </Checkbox>
     </div>
   </div>

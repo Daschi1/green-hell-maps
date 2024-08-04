@@ -59,6 +59,9 @@ importers:
       svelte-check:
         specifier: ^3.8.5
         version: 3.8.5(postcss-load-config@4.0.2(postcss@8.4.40))(postcss@8.4.40)(svelte@5.0.0-next.208)
+      sveltekit-search-params:
+        specifier: ^3.0.0
+        version: 3.0.0(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5)
       tailwindcss:
         specifier: ^3.4.7
         version: 3.4.7
@@ -1481,6 +1484,12 @@ packages:
   svelte@5.0.0-next.208:
     resolution: {integrity: sha512-gYABb68367fGnY/GIpb/j3DD5DUqhVWi6EodEBVpiRA9wLQTpY8QmuPg04xut/0EHqlFU3a40wbpjJKmpL3Y/g==}
     engines: {node: '>=18'}
+
+  sveltekit-search-params@3.0.0:
+    resolution: {integrity: sha512-wq1Yo5zITev8ty9CWGmHgvAh+Xb3mCUewyUmvCdv6MJWi+/aZ4o79Y6SjuduDL0Cfd/KYHkqt4f/wQ4FtokSdw==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.0.0 || ^2.0.0
+      svelte: ^3.55.0 || ^4.0.0 || ^5.0.0
 
   svg.draggable.js@2.2.2:
     resolution: {integrity: sha512-JzNHBc2fLQMzYCZ90KZHN2ohXL0BQJGQimK1kGk6AvSeibuKcIdDX9Kr0dT9+UJ5O8nYA0RB839Lhvk4CY4MZw==}
@@ -2945,6 +2954,15 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.11
       zimmerframe: 1.1.2
+
+  sveltekit-search-params@3.0.0(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5):
+    dependencies:
+      '@sveltejs/kit': 2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5)
+      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@5.0.0-next.208)(vite@5.3.5)
+      svelte: 5.0.0-next.208
+    transitivePeerDependencies:
+      - supports-color
+      - vite
 
   svg.draggable.js@2.2.2:
     dependencies:
