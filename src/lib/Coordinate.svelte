@@ -25,7 +25,9 @@
   role="checkbox"
   tabindex="0"
 >
+  <!-- filled background -->
   <div style="--tw-bg-opacity: {opacity}" class="bg-primary-500 h-full w-full absolute"></div>
+  <!-- coordinates text -->
   <div
     class="flex h-full w-full flex-col items-center justify-center font-mono text-xl text-black absolute"
   >
