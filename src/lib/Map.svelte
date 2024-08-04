@@ -9,14 +9,14 @@
 
   const westStart = 56;
   const westEnd = 20;
-  const westLength = westStart - westEnd + 1; // 36 + 1
+  const westLength = westStart - westEnd + 1; // 36 + 1, used in grid-cols-
 
   const southStart = 12;
   const southEnd = 50;
-  const southLength = southEnd - southStart + 1; // 38 + 1
+  const southLength = southEnd - southStart + 1; // 38 + 1, used in grid-rows-
 </script>
 
-<div class="relative h-[2899px] w-[2751px] cursor-crosshair">
+<div class="relative h-[2899px] w-[2751px] cursor-pointer">
   <img class="pointer-events-none" alt={src} {src} />
 
   <div
