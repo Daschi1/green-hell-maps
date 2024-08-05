@@ -206,6 +206,22 @@
     "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps",
     "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\README.md"
   },
+  "license-checker@25.0.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/davglass/license-checker",
+    "publisher": "Dav Glass",
+    "email": "davglass@gmail.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\license-checker",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\license-checker\\LICENSE"
+  },
+  "npm-check-updates@17.0.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/raineorshine/npm-check-updates",
+    "publisher": "Tomas Junnonen",
+    "email": "tomas1@gmail.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\npm-check-updates",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\npm-check-updates\\LICENSE"
+  },
   "postcss@8.4.40": {
     "licenses": "MIT",
     "repository": "https://github.com/postcss/postcss",
