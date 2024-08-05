@@ -13,19 +13,18 @@
   let { west, south }: Props = $props();
   const coordinate = parseInt(west.toString() + south.toString());
 
-  let clicked = $state($clickedCoordinates?.includes(coordinate) ?? false);
+  let clicked = $derived($clickedCoordinates?.includes(coordinate) ?? false);
   let hovered = $state(false);
   let visible = $derived($alwaysShowCoordinateOverlay || clicked || hovered);
   let opacity = $derived(visible ? $coordinateOverlayOpacity : 0);
 
   function toggleClicked() {
-    clicked = !clicked;
     clickedCoordinates.update((coordinates) => {
       // assign array if empty
       if (!coordinates) coordinates = [];
-      if (clicked) {
+      if (!coordinates.includes(coordinate)) {
         // add coordinate if they don't exist
-        if (!coordinates.includes(coordinate)) coordinates = [...coordinates, coordinate];
+        coordinates = [...coordinates, coordinate];
       } else {
         // remove coordinate if they exist
         coordinates = coordinates.filter((c) => c !== coordinate);
