@@ -26,7 +26,7 @@
         target="_blank">r/GreenHell</A
       >.
     </P>
-    <P>Modifications include the addition of coordinate axes on both sides of the maps.</P>
+    <P>Slightly modified to include coordinate axes on both sides of the maps.</P>
 
     <P class="mt-2">
       <A href="https://greenhell-game.com/" target="_blank">Green Hell</A> is a game developed by <A
