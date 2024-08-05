@@ -1,41 +1,22 @@
-# create-svelte
+# green-hell-maps
 
-Everything you need to build a Svelte project, powered
-by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+### [Green Hell Maps](https://green-hell-maps.daschi.dev/)
 
-## Creating a project
+Available for [Story Mode](https://green-hell-maps.daschi.dev/story-mode)
+and [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia).
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Credits
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Map design by [u/alex3omg](https://www.reddit.com/user/alex3omg/), originally
+posted [here](https://www.reddit.com/r/GreenHell/comments/11miatv/green_hell_full_map_with_icons_spoilers_story_and/)
+on [r/GreenHell](https://www.reddit.com/r/GreenHell/).
+Modifications include the addition of coordinate axes on both sides of the maps.
 
-# create a new project in my-app
-npm create svelte@latest my-app
+[Green Hell](https://greenhell-game.com/) is a game developed
+by [Creepy Jar](https://creepyjar.com/en/).
+
+### Generate `licenses.json`
+
+```shell
+npx license-checker --json --out licenses.json
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install`
-or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for
-> your target environment.
