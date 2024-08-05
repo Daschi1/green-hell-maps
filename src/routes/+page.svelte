@@ -34,5 +34,7 @@
         target="_blank">Creepy Jar</A
       >.
     </P>
+
+    <!-- TODO: add licenses.json credits -->
   </div>
 </div>

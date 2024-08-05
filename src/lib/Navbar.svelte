@@ -19,4 +19,5 @@
     pathname="/spirits-of-amazonia"
     >Spirits of Amazonia
   </NavbarA>
+  <!-- TODO: add blend map -->
 </div>
