@@ -18,6 +18,7 @@
     </P>
   </div>
   <div>
+    <Heading tag="h5">Credits</Heading>
     <P>
       Map design by <A href="https://www.reddit.com/user/alex3omg/" target="_blank">u/alex3omg</A>,
       originally posted <A href="https://www.reddit.com/r/GreenHell/" target="_blank">here</A> on <A
@@ -26,9 +27,8 @@
       >.
     </P>
     <P>Modifications include the addition of coordinate axes on both sides of the maps.</P>
-  </div>
-  <div>
-    <P>
+
+    <P class="mt-2">
       <A href="https://greenhell-game.com/" target="_blank">Green Hell</A> is a game developed by <A
         href="https://creepyjar.com/en/"
         target="_blank">Creepy Jar</A
