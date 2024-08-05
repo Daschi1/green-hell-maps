@@ -19,7 +19,7 @@
       onclick={() => ($coordinateOverlayOpacity = 0.6)}
     />
   </Label>
-  <Label class="flex items-center gap-2">
+  <Label class="flex cursor-pointer items-center gap-2">
     Always show coordinate overlay
     <Checkbox bind:checked={$alwaysShowCoordinateOverlay}></Checkbox>
   </Label>
