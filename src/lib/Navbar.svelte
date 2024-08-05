@@ -7,16 +7,16 @@
 </script>
 
 <div class="flex flex-row items-center gap-2">
-  <NavbarA {activePathname} pathname="/" href="/{$page.url.search}"
+  <NavbarA {activePathname} href="/{$page.url.search}" pathname="/"
     ><Span>Green Hell Maps</Span>
   </NavbarA>
-  <NavbarA {activePathname} pathname="/story-mode" href="/story-mode{$page.url.search}"
+  <NavbarA {activePathname} href="/story-mode{$page.url.search}" pathname="/story-mode"
     >Story Mode
   </NavbarA>
   <NavbarA
     {activePathname}
-    pathname="/spirits-of-amazonia"
     href="/spirits-of-amazonia{$page.url.search}"
+    pathname="/spirits-of-amazonia"
     >Spirits of Amazonia
   </NavbarA>
 </div>
