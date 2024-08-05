@@ -3,11 +3,12 @@
 
   interface Props {
     href: string;
+    pathname: string;
     activePathname: string;
   }
 
-  let { href, activePathname }: Props = $props();
-  let underlineClass = $derived(href == activePathname ? "underline" : "");
+  let { href, activePathname, pathname }: Props = $props();
+  let underlineClass = $derived(pathname === activePathname ? "underline" : "");
 </script>
 
 <A class={underlineClass} {href}>
