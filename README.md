@@ -18,5 +18,5 @@ by [Creepy Jar](https://creepyjar.com/en/).
 ### Generate `licenses.json`
 
 ```shell
-npx license-checker --json --out licenses.json
+license-checker --json --out licenses.json
 ```
