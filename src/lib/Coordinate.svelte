@@ -38,7 +38,7 @@
 
 <div
   style="opacity: {visible ? 100 : 0}"
-  class="relative m-0.5 select-none"
+  class="relative m-0.5 cursor-pointer select-none"
   aria-checked={clicked}
   onclick={toggleClicked}
   onkeydown={() => {}}

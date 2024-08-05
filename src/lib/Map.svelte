@@ -16,7 +16,7 @@
   const southLength = southEnd - southStart + 1; // 38 + 1, used in grid-rows-
 </script>
 
-<div class="relative h-[2899px] w-[2751px] cursor-pointer">
+<div class="relative h-[2899px] w-[2751px]">
   <img class="pointer-events-none" alt={src} {src} />
 
   <div
