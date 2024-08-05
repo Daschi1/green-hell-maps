@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Checkbox, Label, Range } from "flowbite-svelte";
-  import { CloseOutline } from "flowbite-svelte-icons";
+  import { CloseOutline, UndoOutline } from "flowbite-svelte-icons";
   import {
     alwaysShowCoordinateOverlay,
     clickedCoordinates,
@@ -14,8 +14,11 @@
     <span>
       <Range max={1} min={0} step={0.05} bind:value={$coordinateOverlayOpacity} />
     </span>
+    <UndoOutline
+      class="cursor-pointer hover:text-red-600"
+      onclick={() => ($coordinateOverlayOpacity = 0.6)}
+    />
   </Label>
-  <!-- TODO reset to default range -->
   <Label class="flex items-center gap-2">
     Always show coordinate overlay
     <Checkbox bind:checked={$alwaysShowCoordinateOverlay}></Checkbox>
