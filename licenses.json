@@ -1,0 +1,292 @@
+{
+  "@eslint-community/eslint-utils@4.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint-community/eslint-utils",
+    "publisher": "Toru Nagashima",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint-community\\eslint-utils",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint-community\\eslint-utils\\LICENSE"
+  },
+  "@eslint-community/regexpp@4.11.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint-community/regexpp",
+    "publisher": "Toru Nagashima",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint-community\\regexpp",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint-community\\regexpp\\LICENSE"
+  },
+  "@eslint/config-array@0.17.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\config-array",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\config-array\\LICENSE"
+  },
+  "@eslint/eslintrc@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslintrc",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\eslintrc",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\eslintrc\\LICENSE"
+  },
+  "@eslint/js@9.8.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\js",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\js\\LICENSE"
+  },
+  "@eslint/object-schema@2.1.4": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\object-schema",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@eslint\\object-schema\\LICENSE"
+  },
+  "@sveltejs/adapter-auto@3.2.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/kit",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@sveltejs\\adapter-auto",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@sveltejs\\adapter-auto\\LICENSE"
+  },
+  "@sveltejs/kit@2.5.20": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/kit",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@sveltejs\\kit",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@sveltejs\\kit\\LICENSE"
+  },
+  "@sveltejs/vite-plugin-svelte@3.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/vite-plugin-svelte",
+    "publisher": "dominikg",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@sveltejs\\vite-plugin-svelte",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@sveltejs\\vite-plugin-svelte\\LICENSE"
+  },
+  "@types/eslint@9.6.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@types\\eslint",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@types\\eslint\\LICENSE"
+  },
+  "@typescript-eslint/eslint-plugin@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\eslint-plugin",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\eslint-plugin\\LICENSE"
+  },
+  "@typescript-eslint/parser@8.0.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\parser",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\parser\\LICENSE"
+  },
+  "@typescript-eslint/scope-manager@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\scope-manager",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\scope-manager\\LICENSE"
+  },
+  "@typescript-eslint/type-utils@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\type-utils",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\type-utils\\LICENSE"
+  },
+  "@typescript-eslint/types@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\types",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\types\\LICENSE"
+  },
+  "@typescript-eslint/typescript-estree@8.0.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\typescript-estree",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\typescript-estree\\LICENSE"
+  },
+  "@typescript-eslint/utils@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\utils",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\utils\\LICENSE"
+  },
+  "@typescript-eslint/visitor-keys@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\visitor-keys",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\@typescript-eslint\\visitor-keys\\LICENSE"
+  },
+  "autoprefixer@10.4.20": {
+    "licenses": "MIT",
+    "repository": "https://github.com/postcss/autoprefixer",
+    "publisher": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\autoprefixer",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\autoprefixer\\LICENSE"
+  },
+  "eslint-compat-utils@0.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ota-meshi/eslint-compat-utils",
+    "publisher": "Yosuke Ota",
+    "url": "https://github.com/ota-meshi",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-compat-utils",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-compat-utils\\LICENSE"
+  },
+  "eslint-config-prettier@9.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/eslint-config-prettier",
+    "publisher": "Simon Lydell",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-config-prettier",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-config-prettier\\LICENSE"
+  },
+  "eslint-plugin-svelte@2.43.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/eslint-plugin-svelte",
+    "publisher": "Yosuke Ota",
+    "url": "https://github.com/ota-meshi",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-plugin-svelte",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-plugin-svelte\\LICENSE"
+  },
+  "eslint-scope@8.0.2": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/eslint/eslint-scope",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-scope",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-scope\\LICENSE"
+  },
+  "eslint-visitor-keys@4.0.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/eslint-visitor-keys",
+    "publisher": "Toru Nagashima",
+    "url": "https://github.com/mysticatea",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-visitor-keys",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint-visitor-keys\\LICENSE"
+  },
+  "eslint@9.8.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslint",
+    "publisher": "Nicholas C. Zakas",
+    "email": "nicholas+npm@nczconsulting.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\eslint\\LICENSE"
+  },
+  "flowbite-svelte-icons@2.0.0-next.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/themesberg/flowbite-svelte-icons",
+    "publisher": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\flowbite-svelte-icons",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\flowbite-svelte-icons\\LICENSE"
+  },
+  "flowbite-svelte@0.46.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/themesberg/flowbite-svelte",
+    "publisher": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\flowbite-svelte",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\flowbite-svelte\\LICENSE"
+  },
+  "flowbite@2.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/themesberg/flowbite",
+    "publisher": "Bergside Inc.",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\flowbite",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\flowbite\\LICENSE.md"
+  },
+  "globals@15.9.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/globals",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\globals",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\globals\\license"
+  },
+  "green-hell-maps@0.0.1": {
+    "licenses": "UNLICENSED",
+    "private": true,
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\README.md"
+  },
+  "postcss@8.4.40": {
+    "licenses": "MIT",
+    "repository": "https://github.com/postcss/postcss",
+    "publisher": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\postcss",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\postcss\\LICENSE"
+  },
+  "prettier-plugin-svelte@3.2.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/prettier-plugin-svelte",
+    "publisher": "James Birtles",
+    "email": "jameshbirtles@gmail.com",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\prettier-plugin-svelte",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\prettier-plugin-svelte\\LICENSE"
+  },
+  "prettier-plugin-tailwindcss@0.6.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\prettier-plugin-tailwindcss",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\prettier-plugin-tailwindcss\\LICENSE"
+  },
+  "prettier@3.3.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/prettier",
+    "publisher": "James Long",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\prettier",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\prettier\\LICENSE"
+  },
+  "svelte-check@3.8.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/language-tools",
+    "publisher": "The Svelte Community",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\svelte-check",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\svelte-check\\LICENSE"
+  },
+  "svelte-eslint-parser@0.41.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/svelte-eslint-parser",
+    "publisher": "Yosuke Ota",
+    "url": "https://github.com/ota-meshi",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\svelte-eslint-parser",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\svelte-eslint-parser\\LICENSE"
+  },
+  "svelte@5.0.0-next.210": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/svelte",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\svelte",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\svelte\\LICENSE.md"
+  },
+  "sveltekit-search-params@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/paoloricciuti/sveltekit-search-params",
+    "publisher": "Paolo Ricciuti",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\sveltekit-search-params",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\sveltekit-search-params\\LICENSE"
+  },
+  "tailwindcss@3.4.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\tailwindcss",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\tailwindcss\\LICENSE"
+  },
+  "typescript-eslint@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\typescript-eslint",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\typescript-eslint\\LICENSE"
+  },
+  "typescript@5.5.4": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/Microsoft/TypeScript",
+    "publisher": "Microsoft Corp.",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\typescript",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\typescript\\LICENSE.txt"
+  },
+  "vite@5.3.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vitejs/vite",
+    "publisher": "Evan You",
+    "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\vite",
+    "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\vite\\LICENSE.md"
+  }
+}
