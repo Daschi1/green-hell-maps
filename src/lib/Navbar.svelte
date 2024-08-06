@@ -11,13 +11,13 @@
     ><Span>Green Hell Maps</Span>
   </NavbarA>
   <NavbarA {activePathname} href="/story-mode{$page.url.search}" pathname="/story-mode"
-    >Story Mode
+    ><Span>Story Mode</Span>
   </NavbarA>
   <NavbarA
     {activePathname}
     href="/spirits-of-amazonia{$page.url.search}"
     pathname="/spirits-of-amazonia"
-    >Spirits of Amazonia
+    ><Span>Spirits of Amazonia</Span>
   </NavbarA>
   <!-- TODO: add blend map -->
 </div>
