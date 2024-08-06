@@ -1,3 +1,12 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import type { PageData } from "./$types";
 
-licenses.json
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
+  let licenses = $derived(data.licenses);
+</script>
+
+{JSON.stringify(licenses)}
