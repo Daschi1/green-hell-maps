@@ -8,7 +8,7 @@ export default {
     "./node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}",
   ],
 
-  darkMode: "selector",
+  darkMode: "media",
 
   theme: {
     extend: {

@@ -11,20 +11,20 @@
 <div class="flex items-center gap-4">
   <Label class="flex cursor-pointer items-center gap-2">
     Always show coordinate overlay
-    <Checkbox bind:checked={$alwaysShowCoordinateOverlay}></Checkbox>
+    <Checkbox class="cursor-pointer" bind:checked={$alwaysShowCoordinateOverlay}></Checkbox>
   </Label>
 
   <Label class="flex items-center gap-2">
     <span class="flex-shrink-0">Coordinate overlay opacity</span>
     <span><Range max={1} min={0} step={0.05} bind:value={$coordinateOverlayOpacity} /></span>
     <UndoOutline
-      class="cursor-pointer hover:text-red-600"
+      class="cursor-pointer hover:text-red-500"
       onclick={() => ($coordinateOverlayOpacity = 0.6)}
     />
   </Label>
 
   <button
-    class="flex items-center gap-2 hover:text-red-600"
+    class="flex items-center gap-2 text-gray-900 hover:text-red-500 dark:text-gray-300"
     onclick={() => ($clickedCoordinates = null)}
   >
     Unselect all coordinates
