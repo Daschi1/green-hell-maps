@@ -1,9 +1,10 @@
 {
   "name": "green-hell-maps",
   "version": "0.0.1",
-  "private": false,
+  "description": "Green Hell interactive maps",
   "repository": "https://github.com/Daschi1/green-hell-maps",
   "author": "Daschi",
+  "private": false,
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

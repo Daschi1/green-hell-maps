@@ -258,7 +258,7 @@
     "publisher": "Daschi",
     "name": "green-hell-maps",
     "version": "0.0.1",
-    "description": "### [Green Hell Maps](https://green-hell-maps.daschi.dev/)"
+    "description": "Green Hell interactive maps"
   },
   "license-checker@25.0.1": {
     "licenses": "BSD-3-Clause",
