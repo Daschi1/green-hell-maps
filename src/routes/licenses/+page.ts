@@ -1,11 +1,13 @@
 import type { PageLoad } from "./$types";
 
 type License = {
-  licenses: string;
-  repository: string;
-  publisher: string;
-  path: string;
-  licenseFile: string;
+  name?: string;
+  version?: string;
+  description?: string;
+  repository?: string;
+  publisher?: string;
+  licenses?: string;
+  copyright?: string;
 };
 type Licenses = Record<string, License>;
 
