@@ -222,7 +222,7 @@
     "path": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\npm-check-updates",
     "licenseFile": "D:\\ProjectFiles\\WebStorm\\green-hell-maps\\node_modules\\npm-check-updates\\LICENSE"
   },
-  "postcss@8.4.40": {
+  "postcss@8.4.41": {
     "licenses": "MIT",
     "repository": "https://github.com/postcss/postcss",
     "publisher": "Andrey Sitnik",
