@@ -8,7 +8,7 @@
   <meta name="description" content="Green Hell interactive maps" />
 </svelte:head>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col">
   <div>
     <Heading tag="h5">Green Hell Maps</Heading>
     <P>
@@ -17,8 +17,9 @@
       >.
     </P>
   </div>
+  <br>
   <div>
-    <Heading tag="h5">Credits</Heading>
+    <Heading tag="h6">Credits</Heading>
     <P>
       Map design by <A href="https://www.reddit.com/user/alex3omg/" target="_blank">u/alex3omg</A>,
       originally posted <A href="https://www.reddit.com/r/GreenHell/" target="_blank">here</A> on <A
