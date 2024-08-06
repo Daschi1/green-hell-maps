@@ -9,4 +9,8 @@
   let licenses = $derived(data.licenses);
 </script>
 
-{JSON.stringify(licenses)}
+{#each Object.entries(licenses) as [packageId, packageLicense]}
+  <div>
+    {packageId} - {packageLicense.publisher}
+  </div>
+{/each}
