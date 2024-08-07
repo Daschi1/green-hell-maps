@@ -24,4 +24,5 @@ RUN pnpm run build
 # Expose port 3000
 EXPOSE 3000
 
+# Set entrypoint
 CMD [ "node", "-r", "dotenv/config", "build" ]
