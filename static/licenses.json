@@ -50,12 +50,12 @@
     "version": "2.1.4",
     "description": "An object schema merger/validator"
   },
-  "@sveltejs/adapter-auto@3.2.2": {
+  "@sveltejs/adapter-node@5.2.0": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/kit",
-    "name": "@sveltejs/adapter-auto",
-    "version": "3.2.2",
-    "description": "Automatically chooses the SvelteKit adapter for your current environment, if possible.",
+    "name": "@sveltejs/adapter-node",
+    "version": "5.2.0",
+    "description": "Adapter for SvelteKit apps that generates a standalone Node server",
     "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
   },
   "@sveltejs/kit@2.5.20": {
