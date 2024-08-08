@@ -270,13 +270,13 @@
     "description": "Check license info for a package",
     "copyright": "Copyright 2012 Yahoo Inc."
   },
-  "npm-check-updates@17.0.3": {
+  "npm-check-updates@17.0.6": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/raineorshine/npm-check-updates",
     "publisher": "Tomas Junnonen",
     "email": "tomas1@gmail.com",
     "name": "npm-check-updates",
-    "version": "17.0.3",
+    "version": "17.0.6",
     "description": "Find newer versions of dependencies than what your package.json allows",
     "copyright": "Copyright 2013 Tomas Junnonen"
   },
@@ -353,11 +353,11 @@
     "description": "The fastest way to read **AND WRITE** from query search params in [sveltekit](https://github.com/sveltejs/kit).",
     "copyright": "Copyright (c) 2022 Paolo Ricciuti"
   },
-  "tailwindcss@3.4.8": {
+  "tailwindcss@3.4.9": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/tailwindcss",
     "name": "tailwindcss",
-    "version": "3.4.8",
+    "version": "3.4.9",
     "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
     "copyright": "Copyright (c) Tailwind Labs, Inc."
   },
