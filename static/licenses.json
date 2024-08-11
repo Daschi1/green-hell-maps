@@ -34,11 +34,11 @@
     "description": "The legacy ESLintRC config file format for ESLint",
     "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
   },
-  "@eslint/js@9.8.0": {
+  "@eslint/js@9.9.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "name": "@eslint/js",
-    "version": "9.8.0",
+    "version": "9.9.0",
     "description": "ESLint JavaScript language implementation",
     "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
   },
@@ -50,19 +50,19 @@
     "version": "2.1.4",
     "description": "An object schema merger/validator"
   },
-  "@sveltejs/adapter-node@5.2.0": {
+  "@sveltejs/adapter-node@5.2.1": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/kit",
     "name": "@sveltejs/adapter-node",
-    "version": "5.2.0",
+    "version": "5.2.1",
     "description": "Adapter for SvelteKit apps that generates a standalone Node server",
     "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
   },
-  "@sveltejs/kit@2.5.20": {
+  "@sveltejs/kit@2.5.21": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/kit",
     "name": "@sveltejs/kit",
-    "version": "2.5.20",
+    "version": "2.5.21",
     "description": "SvelteKit is the fastest way to build Svelte apps",
     "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
   },
@@ -200,13 +200,13 @@
     "version": "4.0.0",
     "description": "Constants and utilities about visitor keys to traverse AST."
   },
-  "eslint@9.8.0": {
+  "eslint@9.9.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "publisher": "Nicholas C. Zakas",
     "email": "nicholas+npm@nczconsulting.com",
     "name": "eslint",
-    "version": "9.8.0",
+    "version": "9.9.0",
     "description": "An AST-based pattern checker for JavaScript.",
     "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
   },
@@ -300,11 +300,11 @@
     "description": "Svelte plugin for prettier",
     "copyright": "Copyright (c) 2019 [Contributors](https://github.com/sveltejs/prettier-plugin-svelte/graphs/contributors)"
   },
-  "prettier-plugin-tailwindcss@0.6.5": {
+  "prettier-plugin-tailwindcss@0.6.6": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss",
     "name": "prettier-plugin-tailwindcss",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "description": "A Prettier plugin for sorting Tailwind CSS classes.",
     "copyright": "Copyright (c) Tailwind Labs Inc."
   },
@@ -336,11 +336,11 @@
     "description": "Svelte parser for ESLint",
     "copyright": "Copyright (c) 2021 Yosuke Ota"
   },
-  "svelte@5.0.0-next.210": {
+  "svelte@5.0.0-next.216": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/svelte",
     "name": "svelte",
-    "version": "5.0.0-next.210",
+    "version": "5.0.0-next.216",
     "description": "Cybernetically enhanced web apps",
     "copyright": "Copyright (c) 2016-24 [these people](https://github.com/sveltejs/svelte/graphs/contributors)"
   },
