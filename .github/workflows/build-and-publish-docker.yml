@@ -69,12 +69,11 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            ${{ env.IMAGE_NAME }}:latest  # Tag the image with 'latest'
-            ${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}  # Tag the image with the full version (e.g., 1.0.0)
-            ${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}  # Tag the image with the major.minor version (e.g., 1.0)
-            ${{ env.IMAGE_NAME }}:${{ env.MAJOR }}  # Tag the image with the major version (e.g., 1)
-          flavor: |
-            tags=true  # Ensures the tags defined above are created, without adding any extra tags
+            # Define tags for the Docker image using version information
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
 
       # Step 7: Build and push Docker image using Docker Buildx
       - name: Build and push Docker image
