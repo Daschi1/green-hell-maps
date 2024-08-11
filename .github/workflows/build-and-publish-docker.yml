@@ -62,18 +62,19 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token as the password
         # This step logs in to the Docker registry so that images can be pushed
 
-      # Step 6: Extract Docker image metadata (tags, labels)
+        # Step 6: Extract Docker image metadata (tags, labels)
       - name: Extract Docker metadata
         id: meta  # Assigns an ID to this step for referencing its outputs later
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            # Define tags for the Docker image using version information
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
+            ${{ env.IMAGE_NAME }}:latest  # Tag the image with 'latest'
+            ${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}  # Tag the image with the full version (e.g., 1.0.0)
+            ${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}  # Tag the image with the major.minor version (e.g., 1.0)
+            ${{ env.IMAGE_NAME }}:${{ env.MAJOR }}  # Tag the image with the major version (e.g., 1)
+          flavor: |
+            tags=true  # Ensures the tags defined above are created, without adding any extra tags
 
       # Step 7: Build and push Docker image using Docker Buildx
       - name: Build and push Docker image
