@@ -22,5 +22,5 @@ Source code available on [GitHub](https://github.com/Daschi1/green-hell-maps).
 ### Generate `licenses.json`
 
 ```shell
-license-checker --customPath config-license-checker.json --json --out static/licenses.json
+license-checker --customPath config-checker.json --json --out static/licenses.json
 ```
