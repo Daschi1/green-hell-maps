@@ -1,3 +1,20 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/*https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html*/
+/* Webkit-based browsers (Chrome, Safari, Opera) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply bg-primary-600
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  @apply bg-primary-600
+}
+
+/* Internet Explorer and Edge */
+input[type="range"]::-ms-thumb {
+  @apply bg-primary-600
+}

@@ -1,0 +1,389 @@
+{
+  "@eslint-community/eslint-utils@4.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint-community/eslint-utils",
+    "publisher": "Toru Nagashima",
+    "name": "@eslint-community/eslint-utils",
+    "version": "4.4.0",
+    "description": "Utilities for ESLint plugins.",
+    "copyright": "Copyright (c) 2018 Toru Nagashima"
+  },
+  "@eslint-community/regexpp@4.11.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint-community/regexpp",
+    "publisher": "Toru Nagashima",
+    "name": "@eslint-community/regexpp",
+    "version": "4.11.0",
+    "description": "Regular expression parser for ECMAScript.",
+    "copyright": "Copyright (c) 2018 Toru Nagashima"
+  },
+  "@eslint/config-array@0.17.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "name": "@eslint/config-array",
+    "version": "0.17.1",
+    "description": "General purpose glob-based configuration matching."
+  },
+  "@eslint/eslintrc@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslintrc",
+    "publisher": "Nicholas C. Zakas",
+    "name": "@eslint/eslintrc",
+    "version": "3.1.0",
+    "description": "The legacy ESLintRC config file format for ESLint",
+    "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
+  },
+  "@eslint/js@9.8.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslint",
+    "name": "@eslint/js",
+    "version": "9.8.0",
+    "description": "ESLint JavaScript language implementation",
+    "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
+  },
+  "@eslint/object-schema@2.1.4": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "name": "@eslint/object-schema",
+    "version": "2.1.4",
+    "description": "An object schema merger/validator"
+  },
+  "@sveltejs/adapter-node@5.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/kit",
+    "name": "@sveltejs/adapter-node",
+    "version": "5.2.0",
+    "description": "Adapter for SvelteKit apps that generates a standalone Node server",
+    "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
+  },
+  "@sveltejs/kit@2.5.20": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/kit",
+    "name": "@sveltejs/kit",
+    "version": "2.5.20",
+    "description": "SvelteKit is the fastest way to build Svelte apps",
+    "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
+  },
+  "@sveltejs/vite-plugin-svelte@3.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/vite-plugin-svelte",
+    "publisher": "dominikg",
+    "name": "@sveltejs/vite-plugin-svelte",
+    "version": "3.1.1",
+    "description": "The official [Svelte](https://svelte.dev) plugin for [Vite](https://vitejs.dev).",
+    "copyright": "Copyright (c) 2021 [these people](https://github.com/sveltejs/vite-plugin-svelte/graphs/contributors)"
+  },
+  "@types/eslint@9.6.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "name": "@types/eslint",
+    "version": "9.6.0",
+    "description": "TypeScript definitions for eslint"
+  },
+  "@typescript-eslint/eslint-plugin@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/eslint-plugin",
+    "version": "8.0.1",
+    "description": "TypeScript plugin for ESLint",
+    "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
+  },
+  "@typescript-eslint/parser@8.0.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/parser",
+    "version": "8.0.1",
+    "description": "An ESLint custom parser which leverages TypeScript ESTree"
+  },
+  "@typescript-eslint/scope-manager@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/scope-manager",
+    "version": "8.0.1",
+    "description": "TypeScript scope analyser for ESLint",
+    "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
+  },
+  "@typescript-eslint/type-utils@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/type-utils",
+    "version": "8.0.1",
+    "description": "Type utilities for working with TypeScript + ESLint together",
+    "copyright": "Copyright (c) 2021 typescript-eslint and other contributors"
+  },
+  "@typescript-eslint/types@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/types",
+    "version": "8.0.1",
+    "description": "Types for the TypeScript-ESTree AST spec",
+    "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
+  },
+  "@typescript-eslint/typescript-estree@8.0.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/typescript-estree",
+    "version": "8.0.1",
+    "description": "A parser that converts TypeScript source code into an ESTree compatible form"
+  },
+  "@typescript-eslint/utils@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/utils",
+    "version": "8.0.1",
+    "description": "Utilities for working with TypeScript + ESLint together",
+    "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
+  },
+  "@typescript-eslint/visitor-keys@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "@typescript-eslint/visitor-keys",
+    "version": "8.0.1",
+    "description": "Visitor keys used to help traverse the TypeScript-ESTree AST",
+    "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
+  },
+  "autoprefixer@10.4.20": {
+    "licenses": "MIT",
+    "repository": "https://github.com/postcss/autoprefixer",
+    "publisher": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru",
+    "name": "autoprefixer",
+    "version": "10.4.20",
+    "description": "Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website",
+    "copyright": "Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>"
+  },
+  "eslint-compat-utils@0.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ota-meshi/eslint-compat-utils",
+    "publisher": "Yosuke Ota",
+    "url": "https://github.com/ota-meshi",
+    "name": "eslint-compat-utils",
+    "version": "0.5.1",
+    "description": "Provides an API for ESLint custom rules that is compatible with the latest ESLint even when using older ESLint.",
+    "copyright": "Copyright (c) 2023 Yosuke Ota"
+  },
+  "eslint-config-prettier@9.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/eslint-config-prettier",
+    "publisher": "Simon Lydell",
+    "name": "eslint-config-prettier",
+    "version": "9.1.0",
+    "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
+    "copyright": "Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell and contributors"
+  },
+  "eslint-plugin-svelte@2.43.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/eslint-plugin-svelte",
+    "publisher": "Yosuke Ota",
+    "url": "https://github.com/ota-meshi",
+    "name": "eslint-plugin-svelte",
+    "version": "2.43.0",
+    "description": "ESLint plugin for Svelte using AST",
+    "copyright": "Copyright (c) 2021 Yosuke Ota"
+  },
+  "eslint-scope@8.0.2": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/eslint/eslint-scope",
+    "name": "eslint-scope",
+    "version": "8.0.2",
+    "description": "ECMAScript scope analyzer for ESLint",
+    "copyright": "Copyright JS Foundation and other contributors, https://js.foundation. Copyright (C) 2012-2013 Yusuke Suzuki (twitter: @Constellation) and other contributors."
+  },
+  "eslint-visitor-keys@4.0.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/eslint-visitor-keys",
+    "publisher": "Toru Nagashima",
+    "url": "https://github.com/mysticatea",
+    "name": "eslint-visitor-keys",
+    "version": "4.0.0",
+    "description": "Constants and utilities about visitor keys to traverse AST."
+  },
+  "eslint@9.8.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslint",
+    "publisher": "Nicholas C. Zakas",
+    "email": "nicholas+npm@nczconsulting.com",
+    "name": "eslint",
+    "version": "9.8.0",
+    "description": "An AST-based pattern checker for JavaScript.",
+    "copyright": "Copyright OpenJS Foundation and other contributors, <www.openjsf.org>"
+  },
+  "flowbite-svelte-icons@2.0.0-next.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/themesberg/flowbite-svelte-icons",
+    "publisher": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com",
+    "name": "flowbite-svelte-icons",
+    "version": "2.0.0-next.15",
+    "description": "Flowbite icon components for Svelte 5 Runes",
+    "copyright": "Copyright (c) [year] [fullname]"
+  },
+  "flowbite-svelte@0.46.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/themesberg/flowbite-svelte",
+    "publisher": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com",
+    "name": "flowbite-svelte",
+    "version": "0.46.15",
+    "description": "Flowbite components for Svelte",
+    "copyright": "Copyright (c) 2022 Flowbite Svelte (created by Shinichi Okada)"
+  },
+  "flowbite@2.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/themesberg/flowbite",
+    "publisher": "Bergside Inc.",
+    "name": "flowbite",
+    "version": "2.5.1",
+    "description": "The most popular library of interactive components built with Tailwind CSS",
+    "copyright": "Copyright (c) 2023 Bergside Inc."
+  },
+  "globals@15.9.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/globals",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "name": "globals",
+    "version": "15.9.0",
+    "description": "Global identifiers from different JavaScript environments",
+    "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)"
+  },
+  "green-hell-maps@0.0.1": {
+    "licenses": "Custom: https://green-hell-maps.daschi.dev/",
+    "repository": "https://github.com/Daschi1/green-hell-maps",
+    "publisher": "Daschi",
+    "name": "green-hell-maps",
+    "version": "0.0.1",
+    "description": "Green Hell interactive maps"
+  },
+  "license-checker@25.0.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/davglass/license-checker",
+    "publisher": "Dav Glass",
+    "email": "davglass@gmail.com",
+    "name": "license-checker",
+    "version": "25.0.1",
+    "description": "Check license info for a package",
+    "copyright": "Copyright 2012 Yahoo Inc."
+  },
+  "npm-check-updates@17.0.6": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/raineorshine/npm-check-updates",
+    "publisher": "Tomas Junnonen",
+    "email": "tomas1@gmail.com",
+    "name": "npm-check-updates",
+    "version": "17.0.6",
+    "description": "Find newer versions of dependencies than what your package.json allows",
+    "copyright": "Copyright 2013 Tomas Junnonen"
+  },
+  "postcss@8.4.41": {
+    "licenses": "MIT",
+    "repository": "https://github.com/postcss/postcss",
+    "publisher": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru",
+    "name": "postcss",
+    "version": "8.4.41",
+    "description": "Tool for transforming styles with JS plugins",
+    "copyright": "Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>"
+  },
+  "prettier-plugin-svelte@3.2.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/prettier-plugin-svelte",
+    "publisher": "James Birtles",
+    "email": "jameshbirtles@gmail.com",
+    "name": "prettier-plugin-svelte",
+    "version": "3.2.6",
+    "description": "Svelte plugin for prettier",
+    "copyright": "Copyright (c) 2019 [Contributors](https://github.com/sveltejs/prettier-plugin-svelte/graphs/contributors)"
+  },
+  "prettier-plugin-tailwindcss@0.6.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss",
+    "name": "prettier-plugin-tailwindcss",
+    "version": "0.6.5",
+    "description": "A Prettier plugin for sorting Tailwind CSS classes.",
+    "copyright": "Copyright (c) Tailwind Labs Inc."
+  },
+  "prettier@3.3.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/prettier",
+    "publisher": "James Long",
+    "name": "prettier",
+    "version": "3.3.3",
+    "description": "Prettier is an opinionated code formatter",
+    "copyright": "Copyright © James Long and contributors"
+  },
+  "svelte-check@3.8.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/language-tools",
+    "publisher": "The Svelte Community",
+    "name": "svelte-check",
+    "version": "3.8.5",
+    "description": "Svelte Code Checker Terminal Interface",
+    "copyright": "Copyright (c) 2020-Present [these people](https://github.com/sveltejs/language-tools/graphs/contributors)"
+  },
+  "svelte-eslint-parser@0.41.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/svelte-eslint-parser",
+    "publisher": "Yosuke Ota",
+    "url": "https://github.com/ota-meshi",
+    "name": "svelte-eslint-parser",
+    "version": "0.41.0",
+    "description": "Svelte parser for ESLint",
+    "copyright": "Copyright (c) 2021 Yosuke Ota"
+  },
+  "svelte@5.0.0-next.210": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sveltejs/svelte",
+    "name": "svelte",
+    "version": "5.0.0-next.210",
+    "description": "Cybernetically enhanced web apps",
+    "copyright": "Copyright (c) 2016-24 [these people](https://github.com/sveltejs/svelte/graphs/contributors)"
+  },
+  "sveltekit-search-params@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/paoloricciuti/sveltekit-search-params",
+    "publisher": "Paolo Ricciuti",
+    "name": "sveltekit-search-params",
+    "version": "3.0.0",
+    "description": "The fastest way to read **AND WRITE** from query search params in [sveltekit](https://github.com/sveltejs/kit).",
+    "copyright": "Copyright (c) 2022 Paolo Ricciuti"
+  },
+  "tailwindcss@3.4.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "name": "tailwindcss",
+    "version": "3.4.9",
+    "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
+    "copyright": "Copyright (c) Tailwind Labs, Inc."
+  },
+  "typescript-eslint@8.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "name": "typescript-eslint",
+    "version": "8.0.1",
+    "description": "Tooling which enables you to use TypeScript with ESLint",
+    "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
+  },
+  "typescript@5.5.4": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/Microsoft/TypeScript",
+    "publisher": "Microsoft Corp.",
+    "name": "typescript",
+    "version": "5.5.4",
+    "description": "TypeScript is a language for application scale JavaScript development"
+  },
+  "vite@5.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vitejs/vite",
+    "publisher": "Evan You",
+    "name": "vite",
+    "version": "5.4.0",
+    "description": "Native-ESM powered web dev build tool",
+    "copyright": "Copyright (c) 2019-present, Yuxi (Evan) You and Vite contributors"
+  }
+}
