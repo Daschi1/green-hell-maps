@@ -252,12 +252,12 @@
     "description": "Global identifiers from different JavaScript environments",
     "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)"
   },
-  "green-hell-maps@0.0.1": {
+  "green-hell-maps@1.0.0": {
     "licenses": "Custom: https://green-hell-maps.daschi.dev/",
     "repository": "https://github.com/Daschi1/green-hell-maps",
     "publisher": "Daschi",
     "name": "green-hell-maps",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Green Hell interactive maps"
   },
   "license-checker@25.0.1": {
