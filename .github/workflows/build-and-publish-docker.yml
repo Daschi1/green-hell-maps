@@ -14,7 +14,7 @@ env:
 
 # The jobs section defines the sequence of tasks to be run in this workflow.
 jobs:
-  build:
+  build-and-publish:
     # Specify the type of virtual environment to use. 'ubuntu-latest' is commonly used for most workflows.
     runs-on: ubuntu-latest
 
