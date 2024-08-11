@@ -1,0 +1,98 @@
+name: Build and Publish Docker Image
+
+# This workflow triggers on a push to the main branch or pull requests targeting the main branch.
+on:
+  push:
+    branches: [ "main" ]  # Trigger on push to the main branch
+  pull_request:
+    branches: [ "main" ]  # Trigger on pull requests to the main branch
+
+env:
+  # Docker registry configuration
+  REGISTRY: ghcr.io  # Use GitHub Container Registry by default
+  IMAGE_NAME: ${{ github.repository }}  # Docker image name is the GitHub repository name
+
+jobs:
+  build-and-publish:
+
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner for this job
+    permissions:
+      contents: read  # Allows the workflow to read repository contents
+      packages: write  # Allows the workflow to write to GitHub Packages (e.g., Docker images)
+      id-token: write  # Required for signing Docker images with cosign outside of PRs
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # This step checks out the repository code so the workflow can access it
+
+      # Step 2: Extract version information from package.json
+      - name: Extract version from package.json
+        id: version
+        run: |
+          # Extract the full version (e.g., 1.2.3) from package.json
+          MAJOR_MINOR_PATCH=$(grep '"version":' package.json | cut -d '"' -f 4)
+          # Extract the major.minor version (e.g., 1.2)
+          MAJOR_MINOR=$(echo $MAJOR_MINOR_PATCH | cut -d '.' -f1-2)
+          # Extract the major version (e.g., 1)
+          MAJOR=$(echo $MAJOR_MINOR_PATCH | cut -d '.' -f1)
+          # Store the extracted values as environment variables for use in later steps
+          echo "MAJOR_MINOR_PATCH=$MAJOR_MINOR_PATCH" >> $GITHUB_ENV
+          echo "MAJOR_MINOR=$MAJOR_MINOR" >> $GITHUB_ENV
+          echo "MAJOR=$MAJOR" >> $GITHUB_ENV
+
+      # Step 3: Install the cosign tool for signing Docker images
+      - name: Install cosign
+        if: github.event_name != 'pull_request'  # Only install cosign if not a PR
+        uses: sigstore/cosign-installer@v3
+        # This installs the cosign tool for use in the signing step later
+
+      # Step 4: Set up Docker Buildx for building multi-platform Docker images
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        # Docker Buildx enables advanced features like multi-platform builds and cache exporting
+
+      # Step 5: Log in to the Docker registry
+      - name: Log into registry ${{ env.REGISTRY }}
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}  # The Docker registry to log into
+          username: ${{ github.actor }}  # Use the GitHub actor (user) as the username
+          password: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token as the password
+        # This step logs in to the Docker registry so that images can be pushed
+
+      # Step 6: Extract Docker image metadata (tags, labels)
+      - name: Extract Docker metadata
+        id: meta  # Assigns an ID to this step for referencing its outputs later
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            # Define tags for the Docker image using version information
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
+
+      # Step 7: Build and push Docker image using Docker Buildx
+      - name: Build and push Docker image
+        id: build-and-push  # Assigns an ID to this step for referencing its outputs later
+        uses: docker/build-push-action@v5
+        with:
+          context: .  # The context is the root of the repository
+          push: ${{ github.event_name != 'pull_request' }}  # Only push if not a PR
+          tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
+          labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
+          cache-from: type=gha  # Use GitHub Actions cache to speed up builds
+          cache-to: type=gha,mode=max  # Store the cache in GitHub Actions for reuse
+        # This step builds the Docker image and pushes it to the registry (if not a PR)
+
+      # Step 8: Sign the resulting Docker image digest (only if not a PR)
+      - name: Sign the published Docker image
+        if: ${{ github.event_name != 'pull_request' }}  # Only sign if not a PR
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}  # Use the tags generated earlier
+          DIGEST: ${{ steps.build-and-push.outputs.digest }}  # Use the digest of the built image
+        run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+        # This step signs the Docker image using cosign to ensure its integrity and authenticity
