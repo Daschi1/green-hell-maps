@@ -13,7 +13,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}  # Docker image name is the GitHub repository name
 
 jobs:
-  build:
+  build-and-publish:
 
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner for this job
     permissions:
