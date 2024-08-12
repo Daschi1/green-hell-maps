@@ -62,17 +62,17 @@ jobs:
         # This step logs in to the Docker registry so that images can be pushed
         
       # Step 6: Extract Docker image metadata (tags, labels)
-      - name: Extract Docker metadata
-        id: meta  # Assigns an ID to this step for referencing its outputs later
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            # Define tags for the Docker image using version information
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
+      #- name: Extract Docker metadata
+      #  id: meta  # Assigns an ID to this step for referencing its outputs later
+      #  uses: docker/metadata-action@v5
+      #  with:
+      #    images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      #    tags: |
+      #      # Define tags for the Docker image using version information
+      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
+      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
+      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
             
       # Step 7: Build and push Docker image using Docker Buildx
       - name: Build and push Docker image
@@ -81,8 +81,14 @@ jobs:
         with:
           context: .  # The context is the root of the repository
           push: ${{ github.event_name != 'pull_request' }}  # Only push if not a PR
-          tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
-          labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
+          tags: |
+            # Define tags for the Docker image using version information
+            latest
+            ${{ env.MAJOR_MINOR_PATCH }}
+            ${{ env.MAJOR_MINOR }}
+            ${{ env.MAJOR }}
+          # tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
+          # labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
           cache-from: type=gha  # Use GitHub Actions cache to speed up builds
           cache-to: type=gha,mode=max  # Store the cache in GitHub Actions for reuse
         # This step builds the Docker image and pushes it to the registry (if not a PR)
