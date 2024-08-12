@@ -31,16 +31,10 @@ jobs:
       - name: Extract version from package.json
         id: version
         run: |
-          # Extract the full version (e.g., 1.2.3) from package.json
+          # Extract the version from package.json
           MAJOR_MINOR_PATCH=$(grep '"version":' package.json | cut -d '"' -f 4)
-          # Extract the major.minor version (e.g., 1.2)
-          MAJOR_MINOR=$(echo $MAJOR_MINOR_PATCH | cut -d '.' -f1-2)
-          # Extract the major version (e.g., 1)
-          MAJOR=$(echo $MAJOR_MINOR_PATCH | cut -d '.' -f1)
-          # Store the extracted values as environment variables for use in later steps
+          # Store the extracted value as environment variable for use in later steps
           echo "MAJOR_MINOR_PATCH=$MAJOR_MINOR_PATCH" >> $GITHUB_ENV
-          echo "MAJOR_MINOR=$MAJOR_MINOR" >> $GITHUB_ENV
-          echo "MAJOR=$MAJOR" >> $GITHUB_ENV
 
       # Step 3: Install the cosign tool for signing Docker images
       - name: Install cosign
@@ -69,12 +63,10 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern={{major}}.{{minor}}.{{patch}},value=${{ env.MAJOR_MINOR_PATCH }}
             # Define tags for the Docker image using version information
-            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
-            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
-            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
+            type=semver,pattern={{major}}.{{minor}}.{{patch}},value=${{ env.MAJOR_MINOR_PATCH }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ env.MAJOR_MINOR_PATCH }}
+            type=semver,pattern={{major}},value=${{ env.MAJOR_MINOR_PATCH }}
 
       # Step 7: Build and push Docker image using Docker Buildx
       - name: Build and push Docker image
