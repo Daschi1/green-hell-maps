@@ -69,11 +69,12 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
+            type=semver,pattern={{major}}.{{minor}}.{{patch}},value=${{ env.MAJOR_MINOR_PATCH }}
             # Define tags for the Docker image using version information
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
+            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
+            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
+            # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
 
       # Step 7: Build and push Docker image using Docker Buildx
       - name: Build and push Docker image
