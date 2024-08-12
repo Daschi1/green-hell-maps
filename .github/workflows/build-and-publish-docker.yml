@@ -1,92 +1,71 @@
 name: Build and Publish Docker Image
 
-# This workflow triggers on a push to the main branch or pull requests targeting the main branch.
 on:
   push:
-    branches: [ "main" ]  # Trigger on push to the main branch
+    branches: [ "main" ]  # Trigger the workflow when code is pushed to the main branch
   pull_request:
-    branches: [ "main" ]  # Trigger on pull requests to the main branch
-    
+    branches: [ "main" ]  # Trigger the workflow for pull requests targeting the main branch
+
 env:
-  # Docker registry configuration
-  REGISTRY: ghcr.io  # Use GitHub Container Registry by default
-  IMAGE_NAME: ${{ github.repository }}  # Docker image name is the GitHub repository name
-  
+  REGISTRY: ghcr.io  # Set the Docker registry to GitHub Container Registry (ghcr.io)
+  IMAGE_NAME: ${{ github.repository }}  # Use the GitHub repository name as the Docker image name
+
 jobs:
   build-and-publish:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu runner for this job
+    runs-on: ubuntu-latest  # Use the latest stable Ubuntu version as the runner environment
     permissions:
-      contents: read  # Allows the workflow to read repository contents
-      packages: write  # Allows the workflow to write to GitHub Packages (e.g., Docker images)
-      id-token: write  # Required for signing Docker images with cosign outside of PRs
-      
+      contents: read  # Allows reading of repository contents
+      packages: write  # Allows publishing packages (e.g., Docker images) to GitHub Packages
+      id-token: write  # Required for future features like signing images with cosign
+
     steps:
       # Step 1: Check out the repository code
       - name: Checkout repository
-        uses: actions/checkout@v4
-        # This step checks out the repository code so the workflow can access it
-        
+        uses: actions/checkout@v4  # This action checks out the repository code for use in the workflow
+
       # Step 2: Extract version information from package.json
       - name: Extract version from package.json
-        id: version
+        id: version  # Assign an ID to reference this step's outputs later if needed
         run: |
-          # Extract the version (e.g., 1.2.3) from package.json
+          # Extract the semantic version (e.g., 1.2.3) from the package.json file
           SEMVER=$(grep '"version":' package.json | cut -d '"' -f 4)
-          # Store the extracted version as environment variable SEMVER
+          # Store the extracted version as an environment variable for use in later steps
           echo "SEMVER=$SEMVER" >> $GITHUB_ENV
-        
-      # Step 4: Set up Docker Buildx for building multi-platform Docker images
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-        # Docker Buildx enables advanced features like multi-platform builds and cache exporting
-        
-      # Step 5: Log in to the Docker registry
-      - name: Log into registry ${{ env.REGISTRY }}
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}  # The Docker registry to log into
-          username: ${{ github.actor }}  # Use the GitHub actor (user) as the username
-          password: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token as the password
-        # This step logs in to the Docker registry so that images can be pushed
-        
-      # Step 6: Extract Docker image metadata (tags, labels)
-      - name: Extract Docker metadata
-        id: meta  # Assigns an ID to this step for referencing its outputs later
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            # Define tags for the Docker image using version information
-            type=raw,value=latest
-            type=semver,pattern={{major}}.{{minor}}.{{patch}},value=${{ env.SEMVER }}
-            type=semver,pattern={{major}}.{{minor}},value=${{ env.SEMVER }}
-            type=semver,pattern={{major}},value=${{ env.SEMVER }}
-            
-      # Step 7: Build and push Docker image using Docker Buildx
-      - name: Build and push Docker image
-        id: build-and-push  # Assigns an ID to this step for referencing its outputs later
-        uses: docker/build-push-action@v5
-        with:
-          context: .  # The context is the root of the repository
-          push: ${{ github.event_name != 'pull_request' }}  # Only push if not a PR
-          # Define tags for the Docker image using version information
-          tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
-          labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
-          cache-from: type=gha  # Use GitHub Actions cache to speed up builds
-          cache-to: type=gha,mode=max  # Store the cache in GitHub Actions for reuse
-        # This step builds the Docker image and pushes it to the registry (if not a PR)
 
-        # Step 3: Install the cosign tool for signing Docker images
-      #- name: Install cosign
-      #  if: github.event_name != 'pull_request'  # Only install cosign if not a PR
-      #  uses: sigstore/cosign-installer@v3
-        # This installs the cosign tool for use in the signing step later
-        
-      # Step 8: Sign the resulting Docker image digest (only if not a PR)
-      #- name: Sign the published Docker image
-      #  if: ${{ github.event_name != 'pull_request' }}  # Only sign if not a PR
-      #  env:
-      #    TAGS: ${{ steps.meta.outputs.tags }}  # Use the tags generated earlier
-      #    DIGEST: ${{ steps.build-and-push.outputs.digest }}  # Use the digest of the built image
-      #  run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
-        # This step signs the Docker image using cosign to ensure its integrity and authenticity
+      # Step 3: Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3  # Set up Docker Buildx to enable advanced Docker features
+        # Docker Buildx allows for multi-platform builds, build caching, and more
+
+      # Step 4: Log in to the Docker registry
+      - name: Log into registry ${{ env.REGISTRY }}
+        uses: docker/login-action@v3  # Log into the Docker registry to enable pushing images
+        with:
+          registry: ${{ env.REGISTRY }}  # Specify the Docker registry (ghcr.io)
+          username: ${{ github.actor }}  # Use the GitHub actor (the user triggering the workflow) as the username
+          password: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token to authenticate (securely passed as a secret)
+
+      # Step 5: Extract Docker image metadata (tags, labels)
+      - name: Extract Docker metadata
+        id: meta  # Assign an ID to reference this step's outputs (tags and labels) in the build step
+        uses: docker/metadata-action@v5  # This action generates Docker image metadata like tags and labels
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}  # Define the full image name (registry/repository)
+          tags: |
+            # Create various tags for the Docker image based on version information
+            type=raw,value=latest  # Tag the image as "latest"
+            type=semver,pattern={{major}}.{{minor}}.{{patch}},value=${{ env.SEMVER }}  # Full version tag (e.g., 1.2.3)
+            type=semver,pattern={{major}}.{{minor}},value=${{ env.SEMVER }}  # Major.minor tag (e.g., 1.2)
+            type=semver,pattern={{major}},value=${{ env.SEMVER }}  # Major tag (e.g., 1)
+
+      # Step 6: Build and push the Docker image
+      - name: Build and push Docker image
+        id: build-and-push  # Assign an ID to reference this step's outputs (digest) if needed later
+        uses: docker/build-push-action@v5  # This action builds and pushes the Docker image
+        with:
+          context: .  # Use the root of the repository as the build context (includes Dockerfile and source code)
+          push: ${{ github.event_name != 'pull_request' }}  # Push the image only if the event is not a pull request
+          tags: ${{ steps.meta.outputs.tags }}  # Apply the tags generated in the metadata step
+          labels: ${{ steps.meta.outputs.labels }}  # Apply the labels generated in the metadata step
+          cache-from: type=gha  # Use GitHub Actions cache to speed up the build process
+          cache-to: type=gha,mode=max  # Store the build cache in GitHub Actions for future use
