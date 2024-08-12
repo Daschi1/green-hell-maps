@@ -154,6 +154,14 @@
     "description": "Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website",
     "copyright": "Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>"
   },
+  "dotenv@16.4.5": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/motdotla/dotenv",
+    "name": "dotenv",
+    "version": "16.4.5",
+    "description": "Loads environment variables from .env file",
+    "copyright": "Copyright (c) 2015, Scott Motte. All rights reserved."
+  },
   "eslint-compat-utils@0.5.1": {
     "licenses": "MIT",
     "repository": "https://github.com/ota-meshi/eslint-compat-utils",
@@ -336,11 +344,11 @@
     "description": "Svelte parser for ESLint",
     "copyright": "Copyright (c) 2021 Yosuke Ota"
   },
-  "svelte@5.0.0-next.216": {
+  "svelte@5.0.0-next.217": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/svelte",
     "name": "svelte",
-    "version": "5.0.0-next.216",
+    "version": "5.0.0-next.217",
     "description": "Cybernetically enhanced web apps",
     "copyright": "Copyright (c) 2016-24 [these people](https://github.com/sveltejs/svelte/graphs/contributors)"
   },
