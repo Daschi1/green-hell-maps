@@ -94,10 +94,10 @@ jobs:
         # This step builds the Docker image and pushes it to the registry (if not a PR)
         
       # Step 8: Sign the resulting Docker image digest (only if not a PR)
-      - name: Sign the published Docker image
-        if: ${{ github.event_name != 'pull_request' }}  # Only sign if not a PR
-        env:
-          TAGS: ${{ steps.meta.outputs.tags }}  # Use the tags generated earlier
-          DIGEST: ${{ steps.build-and-push.outputs.digest }}  # Use the digest of the built image
-        run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+      #- name: Sign the published Docker image
+      #  if: ${{ github.event_name != 'pull_request' }}  # Only sign if not a PR
+      #  env:
+      #    TAGS: ${{ steps.meta.outputs.tags }}  # Use the tags generated earlier
+      #    DIGEST: ${{ steps.build-and-push.outputs.digest }}  # Use the digest of the built image
+      #  run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
         # This step signs the Docker image using cosign to ensure its integrity and authenticity
