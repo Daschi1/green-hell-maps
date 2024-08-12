@@ -62,17 +62,17 @@ jobs:
         # This step logs in to the Docker registry so that images can be pushed
         
       # Step 6: Extract Docker image metadata (tags, labels)
-      #- name: Extract Docker metadata
-      #  id: meta  # Assigns an ID to this step for referencing its outputs later
-      #  uses: docker/metadata-action@v5
-      #  with:
-      #    images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-      #    tags: |
-      #      # Define tags for the Docker image using version information
-      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
-      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
-      #      ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
+      - name: Extract Docker metadata
+        id: meta  # Assigns an ID to this step for referencing its outputs later
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            # Define tags for the Docker image using version information
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR_PATCH }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR_MINOR }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.MAJOR }}
             
       # Step 7: Build and push Docker image using Docker Buildx
       - name: Build and push Docker image
@@ -82,12 +82,7 @@ jobs:
           context: .  # The context is the root of the repository
           push: ${{ github.event_name != 'pull_request' }}  # Only push if not a PR
           # Define tags for the Docker image using version information
-          tags: |
-            test/test:latest
-            test/test:${{ env.MAJOR_MINOR_PATCH }}
-            test/test:${{ env.MAJOR_MINOR }}
-            test/test:${{ env.MAJOR }}
-          # tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
+          tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
           # labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
           cache-from: type=gha  # Use GitHub Actions cache to speed up builds
           cache-to: type=gha,mode=max  # Store the cache in GitHub Actions for reuse
