@@ -71,7 +71,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}  # Only push if not a PR
           # Define tags for the Docker image using version information
           tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
-          # labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
+          labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
           cache-from: type=gha  # Use GitHub Actions cache to speed up builds
           cache-to: type=gha,mode=max  # Store the cache in GitHub Actions for reuse
         # This step builds the Docker image and pushes it to the registry (if not a PR)
