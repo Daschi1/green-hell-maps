@@ -22,7 +22,7 @@
   <br />
   <div>
     <Heading tag="h5">Credits</Heading>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-2">
       <div>
         <P>
           Map design by <A href="https://www.reddit.com/user/alex3omg/" target="_blank"
