@@ -27,3 +27,15 @@ generate `licenses.json`.
 ```shell
 license-checker --customPath lc-checker-format.json --json --out static/licenses.json
 ```
+
+### Currently deployed version
+
+```shell
+docker run -d \
+  --name green-hell-maps \
+  --restart unless-stopped \
+  -e ORIGIN=https://green-hell-maps.daschi.dev \
+  ghcr.io/daschi1/green-hell-maps:1.0.0
+
+docker network connect nginx green-hell-maps
+```
