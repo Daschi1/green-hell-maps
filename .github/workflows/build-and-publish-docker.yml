@@ -83,10 +83,10 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}  # Only push if not a PR
           # Define tags for the Docker image using version information
           tags: |
-            latest
-            ${{ env.MAJOR_MINOR_PATCH }}
-            ${{ env.MAJOR_MINOR }}
-            ${{ env.MAJOR }}
+            test/test:latest
+            test/test:${{ env.MAJOR_MINOR_PATCH }}
+            test/test:${{ env.MAJOR_MINOR }}
+            test/test:${{ env.MAJOR }}
           # tags: ${{ steps.meta.outputs.tags }}  # Use the tags generated in the previous step
           # labels: ${{ steps.meta.outputs.labels }}  # Use the labels generated in the previous step
           cache-from: type=gha  # Use GitHub Actions cache to speed up builds
