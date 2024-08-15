@@ -50,19 +50,19 @@
     "version": "2.1.4",
     "description": "An object schema merger/validator"
   },
-  "@sveltejs/adapter-node@5.2.1": {
+  "@sveltejs/adapter-node@5.2.2": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/kit",
     "name": "@sveltejs/adapter-node",
-    "version": "5.2.1",
+    "version": "5.2.2",
     "description": "Adapter for SvelteKit apps that generates a standalone Node server",
     "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
   },
-  "@sveltejs/kit@2.5.21": {
+  "@sveltejs/kit@2.5.22": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/kit",
     "name": "@sveltejs/kit",
-    "version": "2.5.21",
+    "version": "2.5.22",
     "description": "SvelteKit is the fastest way to build Svelte apps",
     "copyright": "Copyright (c) 2020 [these people](https://github.com/sveltejs/kit/graphs/contributors)"
   },
@@ -82,65 +82,65 @@
     "version": "9.6.0",
     "description": "TypeScript definitions for eslint"
   },
-  "@typescript-eslint/eslint-plugin@8.0.1": {
+  "@typescript-eslint/eslint-plugin@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/eslint-plugin",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "TypeScript plugin for ESLint",
     "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
   },
-  "@typescript-eslint/parser@8.0.1": {
+  "@typescript-eslint/parser@8.1.0": {
     "licenses": "BSD-2-Clause",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/parser",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "An ESLint custom parser which leverages TypeScript ESTree"
   },
-  "@typescript-eslint/scope-manager@8.0.1": {
+  "@typescript-eslint/scope-manager@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/scope-manager",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "TypeScript scope analyser for ESLint",
     "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
   },
-  "@typescript-eslint/type-utils@8.0.1": {
+  "@typescript-eslint/type-utils@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/type-utils",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "Type utilities for working with TypeScript + ESLint together",
     "copyright": "Copyright (c) 2021 typescript-eslint and other contributors"
   },
-  "@typescript-eslint/types@8.0.1": {
+  "@typescript-eslint/types@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/types",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "Types for the TypeScript-ESTree AST spec",
     "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
   },
-  "@typescript-eslint/typescript-estree@8.0.1": {
+  "@typescript-eslint/typescript-estree@8.1.0": {
     "licenses": "BSD-2-Clause",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/typescript-estree",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "A parser that converts TypeScript source code into an ESTree compatible form"
   },
-  "@typescript-eslint/utils@8.0.1": {
+  "@typescript-eslint/utils@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/utils",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "Utilities for working with TypeScript + ESLint together",
     "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
   },
-  "@typescript-eslint/visitor-keys@8.0.1": {
+  "@typescript-eslint/visitor-keys@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "@typescript-eslint/visitor-keys",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "Visitor keys used to help traverse the TypeScript-ESTree AST",
     "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
   },
@@ -344,11 +344,11 @@
     "description": "Svelte parser for ESLint",
     "copyright": "Copyright (c) 2021 Yosuke Ota"
   },
-  "svelte@5.0.0-next.217": {
+  "svelte@5.0.0-next.221": {
     "licenses": "MIT",
     "repository": "https://github.com/sveltejs/svelte",
     "name": "svelte",
-    "version": "5.0.0-next.217",
+    "version": "5.0.0-next.221",
     "description": "Cybernetically enhanced web apps",
     "copyright": "Copyright (c) 2016-24 [these people](https://github.com/sveltejs/svelte/graphs/contributors)"
   },
@@ -361,19 +361,19 @@
     "description": "The fastest way to read **AND WRITE** from query search params in [sveltekit](https://github.com/sveltejs/kit).",
     "copyright": "Copyright (c) 2022 Paolo Ricciuti"
   },
-  "tailwindcss@3.4.9": {
+  "tailwindcss@3.4.10": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/tailwindcss",
     "name": "tailwindcss",
-    "version": "3.4.9",
+    "version": "3.4.10",
     "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
     "copyright": "Copyright (c) Tailwind Labs, Inc."
   },
-  "typescript-eslint@8.0.1": {
+  "typescript-eslint@8.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "name": "typescript-eslint",
-    "version": "8.0.1",
+    "version": "8.1.0",
     "description": "Tooling which enables you to use TypeScript with ESLint",
     "copyright": "Copyright (c) 2019 typescript-eslint and other contributors"
   },
