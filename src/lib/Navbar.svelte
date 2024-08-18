@@ -22,4 +22,7 @@
   <NavbarA {activePathname} href="/comparison{$page.url.search}" pathname="/comparison"
     ><Span>Comparison</Span>
   </NavbarA>
+  <NavbarA {activePathname} href="/licenses{$page.url.search}" pathname="/licenses"
+    ><Span>Licenses</Span>
+  </NavbarA>
 </div>
