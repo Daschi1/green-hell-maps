@@ -5,7 +5,7 @@
   "repository": "https://github.com/Daschi1/green-hell-maps",
   "author": "Daschi",
   "private": false,
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@9.7.1",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -16,8 +16,8 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "^5.2.1",
-    "@sveltejs/kit": "^2.5.21",
+    "@sveltejs/adapter-node": "^5.2.2",
+    "@sveltejs/kit": "^2.5.22",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@types/eslint": "^9.6.0",
     "autoprefixer": "^10.4.20",
@@ -35,13 +35,13 @@
     "prettier": "^3.3.3",
     "prettier-plugin-svelte": "^3.2.6",
     "prettier-plugin-tailwindcss": "^0.6.6",
-    "svelte": "^5.0.0-next.217",
+    "svelte": "^5.0.0-next.224",
     "svelte-check": "^3.8.5",
     "sveltekit-search-params": "^3.0.0",
-    "tailwindcss": "^3.4.9",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.0"
+    "typescript-eslint": "^8.1.0",
+    "vite": "^5.4.1"
   },
   "type": "module"
 }
