@@ -28,7 +28,7 @@ generate `licenses.json`.
 license-checker --customPath lc-checker-format.json --json --out static/licenses.json
 ```
 
-### Currently deployed version
+### Current Deployment Command
 
 ```shell
 docker run -d \

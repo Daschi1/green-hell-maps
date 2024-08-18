@@ -8,7 +8,7 @@
 <div class="flex flex-col gap-2 p-2">
   <div class="flex flex-row items-center gap-4">
     <Navbar />
-    {#if ["/story-mode", "/spirits-of-amazonia"].includes($page.url.pathname)}
+    {#if ["/story-mode", "/spirits-of-amazonia", "/comparison"].includes($page.url.pathname)}
       <Settings />
     {/if}
   </div>

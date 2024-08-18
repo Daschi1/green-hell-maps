@@ -1,11 +1,13 @@
 <script lang="ts">
   import Coordinate from "./Coordinate.svelte";
+  import { mapOverlayOpacity } from "$lib/settings";
 
   interface Props {
     src: string;
+    blend?: string;
   }
 
-  let { src }: Props = $props();
+  let { src, blend }: Props = $props();
 
   const westStart = 56;
   const westEnd = 20;
@@ -17,7 +19,20 @@
 </script>
 
 <div class="relative h-[2899px] w-[2751px]">
-  <img class="pointer-events-none" alt={src} {src} />
+  <img
+    style="opacity: {blend ? 1 - $mapOverlayOpacity : '100'}"
+    class="pointer-events-none {blend ? 'opacity-50' : ''}"
+    alt={src}
+    {src}
+  />
+  {#if blend}
+    <img
+      style="opacity: {$mapOverlayOpacity}"
+      class="pointer-events-none absolute left-0 top-0"
+      alt={blend}
+      src={blend}
+    />
+  {/if}
 
   <div
     class="absolute left-0 top-0 grid h-full w-full grid-cols-[repeat(37,_minmax(0,_1fr))] grid-rows-[repeat(39,_minmax(0,_1fr))]"
