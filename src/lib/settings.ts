@@ -7,6 +7,7 @@ export const clickedCoordinates = queryParam<number[]>("coordinates", {
   encode: (value: number[]) => clickedCoordinatesEncode(value),
   decode: (value: string | null) => clickedCoordinatesDecode(value),
 });
+export const mapOverlayOpacity = writable(0.5);
 
 /**
  * Encodes an array of four-digit integers into a compact string representation.

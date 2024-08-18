@@ -1,10 +1,12 @@
 <script lang="ts">
   import { Checkbox, Label, Range } from "flowbite-svelte";
   import { CloseOutline, UndoOutline } from "flowbite-svelte-icons";
+  import { page } from "$app/stores";
   import {
     alwaysShowCoordinateOverlay,
     clickedCoordinates,
     coordinateOverlayOpacity,
+    mapOverlayOpacity,
   } from "$lib/settings";
 </script>
 
@@ -30,4 +32,15 @@
     Unselect all coordinates
     <CloseOutline class="-ml-1" />
   </button>
+
+  {#if "/comparison".includes($page.url.pathname)}
+    <Label class="flex items-center gap-2">
+      <span class="flex-shrink-0">Map overlay opacity</span>
+      <span><Range max={1} min={0} step={0.05} bind:value={$mapOverlayOpacity} /></span>
+      <UndoOutline
+        class="cursor-pointer hover:text-red-500"
+        onclick={() => ($mapOverlayOpacity = 0.5)}
+      />
+    </Label>
+  {/if}
 </div>

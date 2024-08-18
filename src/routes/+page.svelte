@@ -22,7 +22,7 @@
   <br />
   <div>
     <Heading tag="h5">Credits</Heading>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-2">
       <div>
         <P>
           Map design by <A href="https://www.reddit.com/user/alex3omg/" target="_blank"
@@ -45,9 +45,11 @@
 
       <div>
         <P class="group flex w-fit items-center gap-1">
-          Created with
+          Created by
+          <A href="https://github.com/Daschi1" target="_blank">Daschi</A>
+          with
           <HeartOutline
-            class="group-hover:motion-safe:animate-pulse group-hover:fill-red-500 group-hover:text-red-500"
+            class="group-hover:fill-red-500 group-hover:text-red-500 group-hover:motion-safe:animate-pulse"
           />
           and many <span><A href="/licenses">open-source projects</A>!</span>
         </P>
