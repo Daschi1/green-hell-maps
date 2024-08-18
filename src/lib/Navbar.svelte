@@ -19,5 +19,7 @@
     pathname="/spirits-of-amazonia"
     ><Span>Spirits of Amazonia</Span>
   </NavbarA>
-  <!-- TODO: add blend map -->
+  <NavbarA {activePathname} href="/comparison{$page.url.search}" pathname="/comparison"
+    ><Span>Comparison</Span>
+  </NavbarA>
 </div>
