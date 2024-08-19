@@ -5,6 +5,24 @@
 Available for [Story Mode](https://green-hell-maps.daschi.dev/story-mode)
 and [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia).
 
+### Features
+
+- **Three Interactive Maps:**
+    - [Story Mode](https://green-hell-maps.daschi.dev/story-mode)
+    - [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia)
+    - [Comparison Map](https://green-hell-maps.daschi.dev/comparison): A blend of the Story Mode and
+      Spirits of Amazonia maps, where you can
+      configure the blend ratio for better comparison.
+
+- **Mark Coordinates:** Left-click on any coordinate to mark it.
+
+- **Shareable URLs:** Marked coordinates are automatically reflected in the URL, allowing you to
+  share or save the URL to easily retrieve your coordinates later.
+
+- **Coordinate Overlay Customization:**
+    - Adjust the opacity of the coordinate overlay to suit your preference.
+    - Toggle between always showing all coordinates or only displaying them on hover.
+
 ### Credits
 
 Map design by [u/alex3omg](https://www.reddit.com/user/alex3omg/), originally
@@ -35,7 +53,7 @@ docker run -d \
   --name green-hell-maps \
   --restart unless-stopped \
   -e ORIGIN=https://green-hell-maps.daschi.dev \
-  ghcr.io/daschi1/green-hell-maps:1.0.0
+  ghcr.io/daschi1/green-hell-maps:1.2.0
 
 docker network connect nginx green-hell-maps
 ```
