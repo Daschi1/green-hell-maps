@@ -10,7 +10,8 @@ and [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia
 - **Three Interactive Maps:**
     - [Story Mode](https://green-hell-maps.daschi.dev/story-mode)
     - [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia)
-    - **Comparison Map:** A blend of the Story Mode and Spirits of Amazonia maps, where you can
+    - [Comparison Map](https://green-hell-maps.daschi.dev/comparison): A blend of the Story Mode and
+      Spirits of Amazonia maps, where you can
       configure the blend ratio for better comparison.
 
 - **Mark Coordinates:** Left-click on any coordinate to mark it.
