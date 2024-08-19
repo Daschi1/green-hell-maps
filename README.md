@@ -53,7 +53,7 @@ docker run -d \
   --name green-hell-maps \
   --restart unless-stopped \
   -e ORIGIN=https://green-hell-maps.daschi.dev \
-  ghcr.io/daschi1/green-hell-maps:1.1.0
+  ghcr.io/daschi1/green-hell-maps:1.2.0
 
 docker network connect nginx green-hell-maps
 ```
