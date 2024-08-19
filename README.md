@@ -5,6 +5,23 @@
 Available for [Story Mode](https://green-hell-maps.daschi.dev/story-mode)
 and [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia).
 
+### Features
+
+- **Three Interactive Maps:**
+    - [Story Mode](https://green-hell-maps.daschi.dev/story-mode)
+    - [Spirits of Amazonia](https://green-hell-maps.daschi.dev/spirits-of-amazonia)
+    - **Comparison Map:** A blend of the Story Mode and Spirits of Amazonia maps, where you can
+      configure the blend ratio for better comparison.
+
+- **Mark Coordinates:** Left-click on any coordinate to mark it.
+
+- **Shareable URLs:** Marked coordinates are automatically reflected in the URL, allowing you to
+  share or save the URL to easily retrieve your coordinates later.
+
+- **Coordinate Overlay Customization:**
+    - Adjust the opacity of the coordinate overlay to suit your preference.
+    - Toggle between always showing all coordinates or only displaying them on hover.
+
 ### Credits
 
 Map design by [u/alex3omg](https://www.reddit.com/user/alex3omg/), originally
