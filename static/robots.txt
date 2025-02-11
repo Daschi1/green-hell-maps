@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://green-hell-maps.daschi.dev/sitemap.xml
