@@ -19,20 +19,42 @@
   let opacity = $derived(visible ? $coordinateOverlayOpacity : 0);
 
   function toggleClicked() {
+    let nextClicked: boolean | undefined;
+    let nextCount: number | undefined;
+
     clickedCoordinates.update((coordinates) => {
       // assign array if empty
       if (!coordinates) coordinates = [];
-      if (!coordinates.includes(coordinate)) {
+      const exists = coordinates.includes(coordinate);
+      if (!exists) {
         // add coordinate if they don't exist
         coordinates = [...coordinates, coordinate];
       } else {
         // remove coordinate if they exist
         coordinates = coordinates.filter((c) => c !== coordinate);
       }
+      nextClicked = !exists;
+      nextCount = coordinates.length;
       // null array if empty
       if (coordinates.length === 0) coordinates = null;
       return coordinates;
     });
+
+    // Send analytics event (safe for SSR and missing script)
+    if (typeof window !== "undefined" && (window as any).stonks?.event) {
+      try {
+        (window as any).stonks.event("Coordinate Toggle", {
+          coordinate_id: String(coordinate),
+          west_deg: String(west),
+          south_deg: String(south),
+          selected: String(Boolean(nextClicked)),
+          action: nextClicked ? "enable" : "disable",
+          selected_count: String(nextCount ?? 0)
+        });
+      } catch {
+        // no-op
+      }
+    }
   }
 </script>
 
