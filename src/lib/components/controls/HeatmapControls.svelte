@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onDestroy, onMount } from "svelte";
   import { Select } from "flowbite-svelte";
   import { heatmapDateRange, maxHeatmapValue } from "$lib/settings";
 
@@ -12,13 +13,14 @@
     { value: "all", name: "All Time" },
   ];
 
-  $effect(() => {
+  onMount(() => {
     if (!$heatmapDateRange) {
       $heatmapDateRange = "30d";
     }
-    return () => {
-      $heatmapDateRange = null;
-    };
+  });
+
+  onDestroy(() => {
+    $heatmapDateRange = null;
   });
 </script>
 
