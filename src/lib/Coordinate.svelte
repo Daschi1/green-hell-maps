@@ -5,20 +5,56 @@
     coordinateOverlayOpacity,
   } from "$lib/settings";
 
-  interface Props {
+  interface CoordinateProps {
     west: number;
     south: number;
+    heatmapMode?: boolean;
+    heatmapIntensity?: number;
+    heatmapAmount?: number;
   }
 
-  let { west, south }: Props = $props();
+  let {
+    west,
+    south,
+    heatmapMode = false,
+    heatmapIntensity,
+    heatmapAmount,
+  }: CoordinateProps = $props();
   const coordinate = parseInt(west.toString() + south.toString());
 
-  let clicked = $derived($clickedCoordinates?.includes(coordinate) ?? false);
+  let isHeatmap = $derived(heatmapMode);
+  let clicked = $derived(isHeatmap ? false : ($clickedCoordinates?.includes(coordinate) ?? false));
   let hovered = $state(false);
-  let visible = $derived($alwaysShowCoordinateOverlay || clicked || hovered);
-  let opacity = $derived(visible ? $coordinateOverlayOpacity : 0);
+  let visible = $derived(isHeatmap || $alwaysShowCoordinateOverlay || clicked || hovered);
+  let bgOpacity = $derived(
+    isHeatmap
+      ? (heatmapIntensity ?? 0) > 0
+        ? $coordinateOverlayOpacity
+        : 0
+      : visible
+        ? $coordinateOverlayOpacity
+        : 0,
+  );
+  let textOpacity = $derived(
+    isHeatmap
+      ? (heatmapIntensity ?? 0) > 0 || hovered || $alwaysShowCoordinateOverlay
+        ? 1
+        : 0
+      : 1,
+  );
+
+  let bgStyle = $derived.by(() => {
+    if (isHeatmap) {
+      const intensity = heatmapIntensity ?? 0;
+      const g = Math.round(255 * (1 - intensity));
+      return `background-color: rgb(255, ${g}, 0); opacity: ${bgOpacity}`;
+    }
+    return `--tw-bg-opacity: ${bgOpacity}`;
+  });
 
   function toggleClicked() {
+    if (isHeatmap) return;
+
     let nextClicked: boolean | undefined;
     let nextCount: number | undefined;
 
@@ -41,15 +77,15 @@
     });
 
     // Send analytics event (safe for SSR and missing script)
-    if (typeof window !== "undefined" && (window as any).stonks?.event) {
+    if (typeof window !== "undefined" && window.stonks?.event) {
       try {
-        (window as any).stonks.event("Coordinate Toggle", {
+        window.stonks.event("Coordinate Toggle", {
           coordinate_id: String(coordinate),
           west_deg: String(west),
           south_deg: String(south),
           selected: String(Boolean(nextClicked)),
           action: nextClicked ? "enable" : "disable",
-          selected_count: String(nextCount ?? 0)
+          selected_count: String(nextCount ?? 0),
         });
       } catch {
         // no-op
@@ -70,16 +106,21 @@
   tabindex="0"
 >
   <!-- filled background -->
-  <div style="--tw-bg-opacity: {opacity}" class="absolute h-full w-full bg-primary-500"></div>
+  <div style={bgStyle} class="absolute h-full w-full {isHeatmap ? '' : 'bg-primary-500'}"></div>
   <!-- coordinates text -->
   <div
+    style="opacity: {textOpacity}"
     class="absolute flex h-full w-full flex-col items-center justify-center font-mono text-xl text-black"
   >
-    <div>
-      <span class="font-bold">{west}</span>'W
-    </div>
-    <div>
-      <span class="font-bold">{south}</span>'S
-    </div>
+    {#if isHeatmap && !hovered && !$alwaysShowCoordinateOverlay}
+      <span class="font-bold">{heatmapAmount ?? 0}</span>
+    {:else}
+      <div>
+        <span class="font-bold">{west}</span>'W
+      </div>
+      <div>
+        <span class="font-bold">{south}</span>'S
+      </div>
+    {/if}
   </div>
 </div>

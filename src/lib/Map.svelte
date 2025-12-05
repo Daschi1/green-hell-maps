@@ -1,13 +1,20 @@
 <script lang="ts">
   import Coordinate from "./Coordinate.svelte";
-  import { mapOverlayOpacity } from "$lib/settings";
+  import { mapOverlayOpacity, maxHeatmapValue as maxHeatmapValueStore } from "$lib/settings";
 
   interface Props {
     src: string;
     blend?: string;
+    heatmapData?: Record<string, number>;
   }
 
-  let { src, blend }: Props = $props();
+  let { src, blend, heatmapData }: Props = $props();
+
+  let maxHeatmapValue = $derived(heatmapData ? Math.max(...Object.values(heatmapData)) : 0);
+
+  $effect(() => {
+    $maxHeatmapValueStore = maxHeatmapValue;
+  });
 
   const westStart = 56;
   const westEnd = 20;
@@ -41,7 +48,18 @@
     {#each { length: southLength } as _, south}
       <!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
       {#each { length: westLength } as _, west}
-        <Coordinate south={southStart + south} west={westStart - west} />
+        {@const s = southStart + south}
+        {@const w = westStart - west}
+        {@const id = w.toString() + s.toString()}
+        <Coordinate
+          heatmapAmount={heatmapData?.[id]}
+          heatmapIntensity={heatmapData?.[id] && maxHeatmapValue
+            ? heatmapData[id] / maxHeatmapValue
+            : undefined}
+          heatmapMode={!!heatmapData}
+          south={s}
+          west={w}
+        />
       {/each}
     {/each}
   </div>

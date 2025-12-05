@@ -8,6 +8,8 @@ export const clickedCoordinates = queryParam<number[]>("coordinates", {
   decode: (value: string | null) => clickedCoordinatesDecode(value),
 });
 export const mapOverlayOpacity = writable(0.5);
+export const maxHeatmapValue = writable(0);
+export const heatmapDateRange = queryParam<string>("date_range");
 
 /**
  * Encodes an array of four-digit integers into a compact string representation.
