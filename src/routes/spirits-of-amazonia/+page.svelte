@@ -1,5 +1,7 @@
 <script lang="ts">
-  import Map from "$lib/Map.svelte";
+  import MapShell from "$lib/layouts/MapShell.svelte";
+  import BaseMap from "$lib/components/map/BaseMap.svelte";
+  import InteractiveCell from "$lib/components/map/InteractiveCell.svelte";
 </script>
 
 <svelte:head>
@@ -7,4 +9,10 @@
   <meta name="description" content="Green Hell interactive map for Spirits of Amazonia" />
 </svelte:head>
 
-<Map src="soa-map-updated.png" />
+<MapShell>
+  <BaseMap src="soa-map-updated.png">
+    {#snippet cell({ west, south })}
+      <InteractiveCell {south} {west} />
+    {/snippet}
+  </BaseMap>
+</MapShell>

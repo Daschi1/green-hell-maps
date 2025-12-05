@@ -1,5 +1,7 @@
 <script lang="ts">
-  import Map from "$lib/Map.svelte";
+  import MapShell from "$lib/layouts/MapShell.svelte";
+  import BaseMap from "$lib/components/map/BaseMap.svelte";
+  import InteractiveCell from "$lib/components/map/InteractiveCell.svelte";
 </script>
 
 <svelte:head>
@@ -10,4 +12,10 @@
   />
 </svelte:head>
 
-<Map blend="soa-map-updated.png" src="sm-map-updated.png" />
+<MapShell showMapOverlayControl={true}>
+  <BaseMap blend="soa-map-updated.png" src="sm-map-updated.png">
+    {#snippet cell({ west, south })}
+      <InteractiveCell {south} {west} />
+    {/snippet}
+  </BaseMap>
+</MapShell>
