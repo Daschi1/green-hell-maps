@@ -1,28 +1,45 @@
 <script lang="ts">
-  import NavbarA from "$lib/extension/NavbarA.svelte";
-  import { Span } from "flowbite-svelte";
+  import { Navbar, NavBrand, NavUl, NavHamburger } from "flowbite-svelte";
   import { page } from "$app/state";
 
-  let activePathname = $derived(page.url.pathname);
+  let activeUrl = $derived(page.url.pathname);
+  let search = $derived(page.url.search);
+
+  const navItems = [
+    { path: "/story-mode", label: "Story Mode" },
+    { path: "/spirits-of-amazonia", label: "Spirits of Amazonia" },
+    { path: "/comparison", label: "Comparison" },
+    { path: "/heatmap", label: "Heatmap" },
+    { path: "/licenses", label: "Licenses" },
+  ];
 </script>
 
-<div class="flex flex-row items-center gap-2">
-  <NavbarA {activePathname} href="/{page.url.search}" pathname="/"
-    ><Span>Green Hell Maps</Span>
-  </NavbarA>
-  <NavbarA {activePathname} href="/story-mode{page.url.search}" pathname="/story-mode"
-    ><Span>Story Mode</Span>
-  </NavbarA>
-  <NavbarA
-    {activePathname}
-    href="/spirits-of-amazonia{page.url.search}"
-    pathname="/spirits-of-amazonia"
-    ><Span>Spirits of Amazonia</Span>
-  </NavbarA>
-  <NavbarA {activePathname} href="/comparison{page.url.search}" pathname="/comparison"
-    ><Span>Comparison</Span>
-  </NavbarA>
-  <NavbarA {activePathname} href="/licenses{page.url.search}" pathname="/licenses"
-    ><Span>Licenses</Span>
-  </NavbarA>
-</div>
+<Navbar
+  fluid
+  class="fixed top-0 z-50 w-full border-b border-gray-700 bg-gray-900/80 px-4 py-3 backdrop-blur-md transition-colors duration-300 sm:px-6"
+>
+  <NavBrand href="/{search}">
+    <span
+      class="self-center whitespace-nowrap text-xl font-bold tracking-wide text-primary-500 transition-colors hover:text-primary-400"
+    >
+      Green Hell Maps
+    </span>
+  </NavBrand>
+  <NavHamburger />
+  <NavUl class="ml-auto">
+    {#each navItems as item}
+      {@const isActive = activeUrl === item.path}
+      <li>
+        <a
+          href="{item.path}{search}"
+          class="block rounded px-3 py-2 font-medium transition-colors md:p-0 {isActive
+            ? 'text-primary-500'
+            : 'text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent md:hover:text-primary-400'}"
+          aria-current={isActive ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    {/each}
+  </NavUl>
+</Navbar>

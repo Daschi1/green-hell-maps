@@ -4,15 +4,18 @@
 
   interface Props {
     children: Snippet;
+    hero?: Snippet;
   }
 
-  let { children }: Props = $props();
+  let { children, hero }: Props = $props();
 </script>
 
-<div class="flex flex-col gap-2 p-2">
-  <div class="flex flex-row items-center gap-4">
-    <Navbar />
-  </div>
-
-  {@render children()}
+<div class="min-h-screen bg-gray-900 text-gray-100">
+  <Navbar />
+  {#if hero}
+    {@render hero()}
+  {/if}
+  <main class="container mx-auto max-w-7xl px-4 pb-12 {hero ? 'pt-12' : 'pt-24'}">
+    {@render children()}
+  </main>
 </div>

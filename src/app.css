@@ -2,19 +2,30 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/*https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html*/
-/* Webkit-based browsers (Chrome, Safari, Opera) */
+/* Global Styles */
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100 antialiased;
+  }
+  /* Improve scrollbar appearance */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-gray-700 hover:bg-gray-600;
+  }
+}
+
+/* Range Inputs */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  @apply bg-primary-600;
+  @apply h-4 w-4 rounded-full bg-primary-500 shadow-md transition-transform hover:scale-110;
 }
 
-/* Firefox */
 input[type="range"]::-moz-range-thumb {
-  @apply bg-primary-600;
-}
-
-/* Internet Explorer and Edge */
-input[type="range"]::-ms-thumb {
-  @apply bg-primary-600;
+  @apply h-4 w-4 rounded-full bg-primary-500 shadow-md transition-transform hover:scale-110;
 }

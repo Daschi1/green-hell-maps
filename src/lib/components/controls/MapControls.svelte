@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Checkbox, Label, Range } from "flowbite-svelte";
+  import { Checkbox, Label, Range, Button } from "flowbite-svelte";
   import { CloseOutline, UndoOutline } from "flowbite-svelte-icons";
   import {
     alwaysShowCoordinateOverlay,
@@ -15,37 +15,68 @@
   let { showMapOverlayControl = false }: Props = $props();
 </script>
 
-<div class="flex items-center gap-4">
-  <Label class="flex cursor-pointer items-center gap-2">
-    Always show coordinate overlay
-    <Checkbox class="cursor-pointer" bind:checked={$alwaysShowCoordinateOverlay}></Checkbox>
-  </Label>
-
-  <Label class="flex items-center gap-2">
-    <span class="flex-shrink-0">Coordinate overlay opacity</span>
-    <span><Range max={1} min={0} step={0.05} bind:value={$coordinateOverlayOpacity} /></span>
-    <UndoOutline
-      class="cursor-pointer hover:text-red-500"
-      onclick={() => ($coordinateOverlayOpacity = 0.6)}
-    />
-  </Label>
-
-  <button
-    class="flex items-center gap-2 text-gray-900 hover:text-red-500 dark:text-gray-300"
-    onclick={() => ($clickedCoordinates = null)}
+<div class="flex flex-col gap-5">
+  <Label
+    class="flex cursor-pointer items-center gap-3 text-sm font-medium text-gray-300 hover:text-white"
   >
-    Unselect all coordinates
-    <CloseOutline class="-ml-1" />
-  </button>
+    <Checkbox
+      class="h-5 w-5 rounded border-gray-600 bg-gray-700 text-primary-500 focus:ring-primary-600 focus:ring-offset-gray-800"
+      bind:checked={$alwaysShowCoordinateOverlay}
+    />
+    <span>Always show coordinates</span>
+  </Label>
+
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center justify-between">
+      <Label class="text-sm font-medium text-gray-300">Coords Opacity</Label>
+      <button
+        class="text-gray-500 transition-colors hover:text-primary-400"
+        onclick={() => ($coordinateOverlayOpacity = 0.6)}
+        title="Reset to default"
+      >
+        <UndoOutline class="h-4 w-4" />
+      </button>
+    </div>
+    <Range
+      class="h-2 cursor-pointer appearance-none rounded-lg bg-gray-700"
+      max={1}
+      min={0}
+      step={0.05}
+      bind:value={$coordinateOverlayOpacity}
+    />
+  </div>
 
   {#if showMapOverlayControl}
-    <Label class="flex items-center gap-2">
-      <span class="flex-shrink-0">Map overlay opacity</span>
-      <span><Range max={1} min={0} step={0.05} bind:value={$mapOverlayOpacity} /></span>
-      <UndoOutline
-        class="cursor-pointer hover:text-red-500"
-        onclick={() => ($mapOverlayOpacity = 0.5)}
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center justify-between">
+        <Label class="text-sm font-medium text-gray-300">Map Overlay Opacity</Label>
+        <button
+          class="text-gray-500 transition-colors hover:text-primary-400"
+          onclick={() => ($mapOverlayOpacity = 0.5)}
+          title="Reset to default"
+        >
+          <UndoOutline class="h-4 w-4" />
+        </button>
+      </div>
+      <Range
+        class="h-2 cursor-pointer appearance-none rounded-lg bg-gray-700"
+        max={1}
+        min={0}
+        step={0.05}
+        bind:value={$mapOverlayOpacity}
       />
-    </Label>
+    </div>
   {/if}
+
+  <Button
+    color="red"
+    outline
+    size="sm"
+    class="mt-2 w-full gap-2 hover:bg-red-900/30"
+    onclick={() => ($clickedCoordinates = null)}
+    disabled={!$clickedCoordinates}
+  >
+    <CloseOutline class="h-4 w-4" />
+    Unselect All
+  </Button>
 </div>

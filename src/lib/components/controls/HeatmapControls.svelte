@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { Select } from "flowbite-svelte";
+  import { Select, Label } from "flowbite-svelte";
   import { heatmapDateRange, maxHeatmapValue } from "$lib/settings";
 
   const dateRanges = [
@@ -24,13 +24,27 @@
   });
 </script>
 
-<div class="flex items-center gap-4">
-  <Select class="!w-32" items={dateRanges} size="sm" bind:value={$heatmapDateRange} />
-  <div class="flex items-center gap-2 text-sm text-gray-900 dark:text-gray-300">
-    <span class="font-bold">0</span>
+<div class="mt-2 flex flex-col gap-5 border-t border-gray-700 pt-4">
+  <div class="flex flex-col gap-2">
+    <Label class="text-sm font-medium text-gray-300">Date Range</Label>
+    <Select
+      class="border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:border-primary-500 focus:ring-primary-500"
+      items={dateRanges}
+      size="sm"
+      bind:value={$heatmapDateRange}
+    />
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <Label class="text-sm font-medium text-gray-300">Visitors (0 - {$maxHeatmapValue})</Label>
     <div
-      class="h-4 w-32 rounded border border-gray-400 bg-gradient-to-r from-[#FFFF00] to-[#FF0000]"
-    ></div>
-    <span class="font-bold">{$maxHeatmapValue}</span>
+      class="relative h-4 w-full overflow-hidden rounded-full border border-gray-600 shadow-inner"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-[#FFFF00] to-[#FF0000]"></div>
+    </div>
+    <div class="flex justify-between font-mono text-xs text-gray-400">
+      <span>Min: 0</span>
+      <span>Max: {$maxHeatmapValue}</span>
+    </div>
   </div>
 </div>

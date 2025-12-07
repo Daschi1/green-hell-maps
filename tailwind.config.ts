@@ -8,13 +8,35 @@ export default {
     "./node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}",
   ],
 
-  darkMode: "media",
+  darkMode: "class",
 
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "system-ui",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        mono: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
+      },
       colors: {
-        // flowbite-svelte
-        // green
         primary: {
           "50": "#f0fdf4",
           "100": "#dcfce7",
@@ -26,6 +48,19 @@ export default {
           "700": "#15803d",
           "800": "#166534",
           "900": "#14532d",
+        },
+        gray: {
+          "50": "#f9fafb",
+          "100": "#f3f4f6",
+          "200": "#e5e7eb",
+          "300": "#d1d5db",
+          "400": "#9ca3af",
+          "500": "#6b7280",
+          "600": "#4b5563",
+          "700": "#374151",
+          "800": "#1f2937",
+          "900": "#111827",
+          "950": "#030712",
         },
       },
     },
